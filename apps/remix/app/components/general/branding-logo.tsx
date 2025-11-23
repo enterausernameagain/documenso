@@ -1,27 +1,26 @@
 /* apps/remix/app/components/general/branding-logo.tsx */
-import { cn } from "@documenso/ui/lib/utils";
-import type { ImgHTMLAttributes } from "react";
+import type { SVGAttributes } from 'react';
 
-/* * RedSolutions Logo Component
- * Loads the PNG logo from the /public folder instead of drawing an SVG.
- */
+/* We define the props as SVGAttributes so the PDF generator is happy */
+export type LogoProps = SVGAttributes<SVGSVGElement>;
 
-export type BrandingLogoProps = {
-  className?: string;
-} & ImgHTMLAttributes<HTMLImageElement>;
-
-export const BrandingLogo = ({ className, ...props }: BrandingLogoProps) => {
+export const BrandingLogo = (props: LogoProps) => {
   return (
-    <img
-      src="/logo.png"
-      alt="Redsolutions"
-      /* * 'h-8' sets height to 32px. 
-       * 'w-auto' keeps aspect ratio. 
-       * You can change h-8 to h-10 or h-12 if you need it bigger.
-       */
-      className={cn("h-8 w-auto", className)}
+    /* This SVG wrapper satisfies the system's type requirements */
+    <svg 
+      xmlns="http://www.w3.org/2000/svg" 
+      /* Defines a 4:1 aspect ratio container. Adjust if your logo looks cut off. */
+      viewBox="0 0 200 50" 
       {...props}
-    />
+    >
+      /* This embeds your PNG inside the SVG wrapper */
+      <image 
+        href="/logo.png" 
+        width="200" 
+        height="50"
+        preserveAspectRatio="xMidYMid meet"
+      />
+    </svg>
   );
 };
 
