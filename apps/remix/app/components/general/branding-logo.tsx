@@ -14,7 +14,7 @@ export const BrandingLogo = ({ className, ...props }: BrandingLogoProps) => {
   return (
     <img
       src="/logo.png"
-      alt="RedSolutions"
+      alt="Redsolutions"
       /* * 'h-8' sets height to 32px. 
        * 'w-auto' keeps aspect ratio. 
        * You can change h-8 to h-10 or h-12 if you need it bigger.
