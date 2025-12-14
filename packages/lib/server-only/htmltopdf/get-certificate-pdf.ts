@@ -13,7 +13,7 @@ export type GetCertificatePdfOptions = {
 };
 
 export const getCertificatePdf = async ({ documentId, language }: GetCertificatePdfOptions) => {
-  const { chromium } from await import('playwright');
+  const { chromium } = await import('playwright');
 
   const encryptedId = encryptSecondaryData({
     data: documentId.toString(),
@@ -48,7 +48,7 @@ export const getCertificatePdf = async ({ documentId, language }: GetCertificate
     {
       name: 'lang',
       value: lang,
-      url: NEXT_PUBLIC_WEBAPP_URL,
+      url: NEXT_PUBLIC_WEBAPP_URL(),
     },
   ]);
 

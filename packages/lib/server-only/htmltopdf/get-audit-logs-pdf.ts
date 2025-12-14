@@ -13,7 +13,7 @@ export type GetAuditLogsPdfOptions = {
 };
 
 export const getAuditLogsPdf = async ({ documentId, language }: GetAuditLogsPdfOptions) => {
-  const { chromium } from await import('playwright');
+  const { chromium } = await import('playwright');
 
   const encryptedId = encryptSecondaryData({
     data: documentId.toString(),
@@ -48,7 +48,7 @@ export const getAuditLogsPdf = async ({ documentId, language }: GetAuditLogsPdfO
     {
       name: 'language',
       value: lang,
-      url: NEXT_PUBLIC_WEBAPP_URL,
+      url: NEXT_PUBLIC_WEBAPP_URL(),
     },
   ]);
 

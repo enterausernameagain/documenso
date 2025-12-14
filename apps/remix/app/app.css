@@ -1,11 +1,9 @@
 @import '@documenso/ui/styles/theme.css';
 
 /* === NEW THEME FONT: LATO === */
-[cite_start]/* Importing Lato as defined in your theme document [cite: 20, 21] */
-@import url('https://fonts.googleapis.com/css?family=Lato:ital,wght@0,400;0,700;0,900;1,400&family=Inter:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;0,700;0,900;1,400&family=Inter:wght@400;500;600;700&display=swap');
 
 /* === ORIGINAL FONT IMPORTS (REQUIRED FOR APP STABILITY) === */
-/* Inter Variable Fonts */
 @font-face {
   font-family: 'Inter';
   src: url('/fonts/inter-variablefont_opsz,wght.ttf') format('truetype-variations');
@@ -14,7 +12,6 @@
   font-display: swap;
 }
 
-/* Inter Italic Variable Fonts */
 @font-face {
   font-family: 'Inter';
   src: url('/fonts/inter-italic-variablefont_opsz,wght.ttf') format('truetype-variations');
@@ -23,7 +20,6 @@
   font-display: swap;
 }
 
-/* Caveat Variable Font */
 @font-face {
   font-family: 'Caveat';
   src: url('/fonts/caveat-variablefont_wght.ttf') format('truetype-variations');
@@ -40,7 +36,6 @@
   font-display: swap;
 }
 
-/* Korean noto sans */
 @font-face {
   font-family: 'Noto Sans Korean';
   src: url('/fonts/noto-sans-korean.ttf') format('truetype-variations');
@@ -49,7 +44,6 @@
   font-display: swap;
 }
 
-/* Japanese noto sans */
 @font-face {
   font-family: 'Noto Sans Japanese';
   src: url('/fonts/noto-sans-japanese.ttf') format('truetype-variations');
@@ -58,7 +52,6 @@
   font-display: swap;
 }
 
-/* Chinese noto sans */
 @font-face {
   font-family: 'Noto Sans Chinese';
   src: url('/fonts/noto-sans-chinese.ttf') format('truetype-variations');
@@ -70,83 +63,57 @@
 /* === REDSOLUTIONS THEME OVERRIDES === */
 @layer base {
   :root {
-    [cite_start]/* TYPOGRAPHY [cite: 22-28] */
-    /* Primary set to Lato for long reading sessions */
+    /* TYPOGRAPHY */
     --font-sans: 'Lato', 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-    /* Secondary UI font remains Inter for crispness */
     --font-ui: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
-    /* Legacy font support */
     --font-signature: 'Caveat';
     --font-noto: 'Noto Sans', 'Noto Sans Korean', 'Noto Sans Japanese', 'Noto Sans Chinese';
 
-    [cite_start]/* LIGHT MODE COLORS [cite: 64-119] */
-    /* Primary Brand Color: Blue #1e5bb8 */
+    /* LIGHT MODE COLORS */
     --brand-primary: #1e5bb8;
-    
-    /* Mapped to CSS variables for Tailwind */
     --background: #ffffff;
-    --foreground: #111827; /* Dark gray text for readability */
-    
+    --foreground: #111827;
     --muted: #f3f4f6;
     --muted-foreground: #6b7280;
-    
     --popover: #ffffff;
     --popover-foreground: #111827;
-    
     --card: #ffffff;
     --card-foreground: #111827;
-    
     --border: #e5e7eb;
     --input: #e5e7eb;
-    
     --primary: #1e5bb8;
     --primary-foreground: #ffffff;
-    
     --secondary: #f3f4f6;
     --secondary-foreground: #1f2937;
-    
     --accent: #f3f4f6;
     --accent-foreground: #111827;
-    
     --destructive: #ef4444;
     --destructive-foreground: #fef2f2;
-    
     --ring: rgba(30, 91, 184, 0.3);
-    
-    --radius: 0.5rem; /* Standard Enterprise Radius */
+    --radius: 0.5rem;
   }
 
-  [cite_start]/* DARK MODE COLORS [cite: 124-148] */
+  /* DARK MODE COLORS */
   .dark {
-    --brand-primary: #1e5bb8; /* Keep brand consistency */
-    
-    --background: #0a0a0a; /* Premium Black Theme */
+    --brand-primary: #1e5bb8;
+    --background: #0a0a0a;
     --foreground: #ffffff;
-    
     --muted: #1a1a1a;
     --muted-foreground: #9ca3af;
-    
     --popover: #0a0a0a;
     --popover-foreground: #ffffff;
-    
     --card: #0a0a0a;
     --card-foreground: #ffffff;
-    
     --border: #1a1a1a;
     --input: #1a1a1a;
-    
     --primary: #1e5bb8;
     --primary-foreground: #ffffff;
-    
     --secondary: #1a1a1a;
     --secondary-foreground: #ffffff;
-    
     --accent: #1a1a1a;
     --accent-foreground: #ffffff;
-    
     --destructive: #7f1d1d;
     --destructive-foreground: #fef2f2;
-    
-    --ring: rgba(42, 109, 212, 0.4);
+    --ring: rgba(30, 91, 184, 0.5);
   }
 }

@@ -906,6 +906,7 @@ msgstr "Aktion"
 #: apps/remix/app/routes/_authenticated+/o.$orgUrl.settings.email-domains.$id.tsx
 #: apps/remix/app/routes/_authenticated+/o.$orgUrl.settings.email-domains.$id.tsx
 #: apps/remix/app/routes/_authenticated+/admin+/organisations.$id.tsx
+#: apps/remix/app/components/tables/user-billing-organisations-table.tsx
 #: apps/remix/app/components/tables/templates-table.tsx
 #: apps/remix/app/components/tables/team-members-table.tsx
 #: apps/remix/app/components/tables/team-members-table.tsx
@@ -929,6 +930,7 @@ msgstr "Aktionen"
 
 #: apps/remix/app/routes/_authenticated+/o.$orgUrl.settings.members.tsx
 #: apps/remix/app/routes/_authenticated+/t.$teamUrl+/settings._index.tsx
+#: apps/remix/app/components/tables/user-billing-organisations-table.tsx
 #: apps/remix/app/components/tables/organisation-email-domains-table.tsx
 msgid "Active"
 msgstr "Aktiv"
@@ -1666,8 +1668,8 @@ msgid "Are you sure you want to reject this document? This action cannot be undo
 msgstr "Sind Sie sicher, dass Sie dieses Dokument ablehnen möchten? Diese Aktion kann nicht rückgängig gemacht werden."
 
 #: apps/remix/app/components/tables/settings-security-passkey-table-actions.tsx
-msgid "Are you sure you want to remove the <0>{passkeyName}</0> passkey."
-msgstr "Bist du sicher, dass du den <0>{passkeyName}</0> Passkey entfernen möchtest."
+msgid "Are you sure you want to remove the <0>{passkeyName}</0> passkey?"
+msgstr ""
 
 #: apps/remix/app/components/dialogs/organisation-delete-dialog.tsx
 msgid "Are you sure you wish to delete this organisation?"
@@ -1857,6 +1859,7 @@ msgstr "Bitte bestätige vor dem Start deine E-Mail-Adresse, indem du auf den Bu
 
 #: apps/remix/app/routes/_authenticated+/o.$orgUrl.settings.billing.tsx
 #: apps/remix/app/routes/_authenticated+/o.$orgUrl.settings._layout.tsx
+#: apps/remix/app/routes/_authenticated+/settings+/billing.tsx
 #: apps/remix/app/components/general/settings-nav-mobile.tsx
 #: apps/remix/app/components/general/settings-nav-desktop.tsx
 msgid "Billing"
@@ -3678,13 +3681,10 @@ msgid "Drag and drop your PDF file here"
 msgstr "Ziehen Sie Ihre PDF-Datei hierher"
 
 #: packages/ui/primitives/signature-pad/signature-pad.tsx
-msgid "Draw"
-msgstr "Zeichnen"
-
 #: packages/lib/constants/document.ts
-msgctxt "Draw signatute type"
+msgctxt "Draw signature"
 msgid "Draw"
-msgstr "Zeichnen"
+msgstr ""
 
 #: apps/remix/app/components/embed/authoring/configure-document-upload.tsx
 msgid "Drop your document here"
@@ -3743,6 +3743,14 @@ msgstr "Vorlage duplizieren"
 msgid "Duplicate values are not allowed"
 msgstr "Doppelte Werte sind nicht erlaubt"
 
+#: packages/ui/primitives/document-flow/field-items-advanced-settings/number-field.tsx
+msgid "E.g. 0"
+msgstr ""
+
+#: packages/ui/primitives/document-flow/field-items-advanced-settings/number-field.tsx
+msgid "E.g. 100"
+msgstr ""
+
 #: apps/remix/app/routes/_authenticated+/t.$teamUrl+/settings.webhooks._index.tsx
 #: apps/remix/app/components/tables/templates-table-action-dropdown.tsx
 #: apps/remix/app/components/tables/settings-security-passkey-table-actions.tsx
@@ -3761,6 +3769,15 @@ msgstr "Vorlage bearbeiten"
 #: apps/remix/app/routes/_authenticated+/t.$teamUrl+/settings.webhooks.$id.tsx
 msgid "Edit webhook"
 msgstr "Webhook bearbeiten"
+
+#: apps/remix/app/components/dialogs/team-email-update-dialog.tsx
+#: apps/remix/app/components/dialogs/team-email-add-dialog.tsx
+msgid "eg. Legal"
+msgstr ""
+
+#: apps/remix/app/components/dialogs/passkey-create-dialog.tsx
+msgid "eg. Mac"
+msgstr ""
 
 #: apps/remix/app/routes/_unauthenticated+/articles.signature-disclosure.tsx
 msgid "Electronic Delivery of Documents"
@@ -4015,10 +4032,12 @@ msgid "Enter the domain you want to use for sending emails (without http:// or w
 msgstr "Geben Sie die Domain ein, die Sie zum Versenden von E-Mails verwenden möchten (ohne http:// oder www)"
 
 #: apps/remix/app/components/general/document-signing/document-signing-complete-dialog.tsx
+#: apps/remix/app/components/dialogs/assistant-confirmation-dialog.tsx
 msgid "Enter the next signer's email"
 msgstr "Geben Sie die E-Mail des nächsten Unterzeichners ein"
 
 #: apps/remix/app/components/general/document-signing/document-signing-complete-dialog.tsx
+#: apps/remix/app/components/dialogs/assistant-confirmation-dialog.tsx
 msgid "Enter the next signer's name"
 msgstr "Geben Sie den Namen des nächsten Unterzeichners ein"
 
@@ -4052,6 +4071,7 @@ msgstr "Geben Sie Ihren Namen ein"
 msgid "Enter your number here"
 msgstr "Geben Sie Ihre Nummer hier ein"
 
+#: apps/remix/app/components/general/document-signing/document-signing-auth-password.tsx
 #: apps/remix/app/components/general/document-signing/document-signing-auth-dialog.tsx
 msgid "Enter your password"
 msgstr "Geben Sie Ihr Passwort ein"
@@ -4183,6 +4203,7 @@ msgid "Event Type"
 msgstr "Ereignistyp"
 
 #: apps/remix/app/components/dialogs/folder-update-dialog.tsx
+#: packages/ui/components/document/document-visibility-select.tsx
 msgid "Everyone"
 msgstr "Jeder"
 
@@ -4445,6 +4466,7 @@ msgstr "Passwort vergessen?"
 msgid "Forgot your password?"
 msgstr "Hast du dein Passwort vergessen?"
 
+#: apps/remix/app/components/tables/user-billing-organisations-table.tsx
 #: apps/remix/app/components/tables/admin-organisations-table.tsx
 #: apps/remix/app/components/dialogs/organisation-create-dialog.tsx
 msgid "Free"
@@ -4769,6 +4791,10 @@ msgstr "Wenn Ihre Authenticator-App keine QR-Codes unterstützt, können Sie sta
 #: apps/remix/app/routes/_unauthenticated+/organisation.sso.confirmation.$token.tsx
 msgid "Important: What This Means"
 msgstr "Wichtig: Was dies bedeutet"
+
+#: apps/remix/app/components/tables/user-billing-organisations-table.tsx
+msgid "Inactive"
+msgstr ""
 
 #: apps/remix/app/components/general/app-nav-mobile.tsx
 #: apps/remix/app/components/general/app-nav-mobile.tsx
@@ -5213,9 +5239,14 @@ msgstr "Vorlage verwalten und anzeigen"
 msgid "Manage billing"
 msgstr "Rechnungsmanagement"
 
+#: apps/remix/app/components/tables/user-billing-organisations-table.tsx
 #: apps/remix/app/components/general/organisations/organisation-billing-banner.tsx
 msgid "Manage Billing"
 msgstr "Rechnungsverwaltung"
+
+#: apps/remix/app/routes/_authenticated+/settings+/billing.tsx
+msgid "Manage billing and subscriptions for organisations where you have billing management permissions."
+msgstr ""
 
 #: apps/remix/app/components/dialogs/public-profile-template-manage-dialog.tsx
 msgid "Manage details for this public template"
@@ -5861,6 +5892,7 @@ msgstr "Oder fahren Sie fort mit"
 
 #: apps/remix/app/routes/_unauthenticated+/organisation.sso.confirmation.$token.tsx
 #: apps/remix/app/components/tables/user-organisations-table.tsx
+#: apps/remix/app/components/tables/user-billing-organisations-table.tsx
 #: apps/remix/app/components/tables/admin-organisations-table.tsx
 msgid "Organisation"
 msgstr "Organisation"
@@ -6113,6 +6145,10 @@ msgstr "Passwort aktualisiert"
 msgid "Password updated!"
 msgstr "Passwort aktualisiert!"
 
+#: apps/remix/app/components/tables/user-billing-organisations-table.tsx
+msgid "Past Due"
+msgstr ""
+
 #: apps/remix/app/components/general/organisations/organisation-billing-banner.tsx
 #: apps/remix/app/components/general/organisations/organisation-billing-banner.tsx
 msgid "Payment overdue"
@@ -6328,6 +6364,10 @@ msgstr "Bitte beachten Sie, dass Sie den Zugriff auf alle mit diesem Team verbun
 #: apps/remix/app/components/general/document-signing/access-auth-2fa-form.tsx
 msgid "Please open your authenticator app and enter the 6-digit code for this document."
 msgstr "Bitte öffnen Sie Ihre Authentifizierungs-App und geben Sie den 6-stelligen Code für dieses Dokument ein."
+
+#: apps/remix/app/components/general/document-signing/document-signing-reject-dialog.tsx
+msgid "Please provide a reason for rejecting this document"
+msgstr ""
 
 #: apps/remix/app/components/forms/2fa/disable-authenticator-app-dialog.tsx
 msgid "Please provide a token from the authenticator, or a backup code. If you do not have a backup code available, please contact support."
@@ -7114,6 +7154,10 @@ msgstr "Wählen Sie eine Zeitzone aus"
 msgid "Select access methods"
 msgstr "Zugriffsmethoden auswählen"
 
+#: apps/remix/app/components/dialogs/webhook-test-dialog.tsx
+msgid "Select an event type"
+msgstr ""
+
 #: apps/remix/app/components/dialogs/sign-field-dropdown-dialog.tsx
 #: packages/ui/primitives/combobox.tsx
 msgid "Select an option"
@@ -7183,10 +7227,19 @@ msgid "Select passkey"
 msgstr "Passkey auswählen"
 
 #: apps/remix/app/components/forms/document-preferences-form.tsx
+#: apps/remix/app/components/embed/authoring/configure-document-advanced-settings.tsx
+#: packages/ui/primitives/template-flow/add-template-settings.tsx
+#: packages/ui/primitives/document-flow/add-settings.tsx
 msgid "Select signature types"
 msgstr "Signaturtypen auswählen"
 
 #: apps/remix/app/components/forms/editor/editor-field-generic-field-forms.tsx
+#: packages/ui/primitives/document-flow/field-items-advanced-settings/text-field.tsx
+#: packages/ui/primitives/document-flow/field-items-advanced-settings/number-field.tsx
+#: packages/ui/primitives/document-flow/field-items-advanced-settings/name-field.tsx
+#: packages/ui/primitives/document-flow/field-items-advanced-settings/initials-field.tsx
+#: packages/ui/primitives/document-flow/field-items-advanced-settings/email-field.tsx
+#: packages/ui/primitives/document-flow/field-items-advanced-settings/date-field.tsx
 msgid "Select text align"
 msgstr "Textausrichtung wählen"
 
@@ -7206,6 +7259,10 @@ msgstr "Wählen Sie die Mitglieder, die in diese Gruppe aufgenommen werden solle
 #: apps/remix/app/components/general/webhook-multiselect-combobox.tsx
 msgid "Select triggers"
 msgstr "Auslöser auswählen"
+
+#: packages/ui/primitives/multi-select-combobox.tsx
+msgid "Select values..."
+msgstr ""
 
 #: apps/remix/app/components/forms/editor/editor-field-generic-field-forms.tsx
 msgid "Select vertical align"
@@ -7891,6 +7948,10 @@ msgstr "Abonnementansprüche"
 msgid "Subscription invalid"
 msgstr "Abonnement ungültig"
 
+#: apps/remix/app/components/tables/user-billing-organisations-table.tsx
+msgid "Subscription Status"
+msgstr ""
+
 #: apps/remix/app/routes/embed+/v1+/authoring+/template.edit.$id.tsx
 #: apps/remix/app/routes/embed+/v1+/authoring+/document.edit.$id.tsx
 #: apps/remix/app/routes/_authenticated+/o.$orgUrl.settings.sso.tsx
@@ -7959,8 +8020,14 @@ msgstr "Erfolgreich erstellt: {successCount}"
 msgid "Summary:"
 msgstr "Zusammenfassung:"
 
+#: apps/remix/app/components/dialogs/organisation-email-create-dialog.tsx
+msgid "support"
+msgstr ""
+
 #: apps/remix/app/routes/_authenticated+/o.$orgUrl.support.tsx
 #: apps/remix/app/components/general/org-menu-switcher.tsx
+#: apps/remix/app/components/dialogs/organisation-email-update-dialog.tsx
+#: apps/remix/app/components/dialogs/organisation-email-create-dialog.tsx
 msgid "Support"
 msgstr "Support"
 
@@ -9110,18 +9177,22 @@ msgstr "Zwei-Faktor-Wiederauthentifizierung"
 
 #: apps/remix/app/components/tables/templates-table.tsx
 #: apps/remix/app/components/tables/admin-document-recipient-item-table.tsx
-#: packages/ui/primitives/signature-pad/signature-pad.tsx
 msgid "Type"
 msgstr "Typ"
 
+#: packages/ui/primitives/signature-pad/signature-pad.tsx
 #: packages/lib/constants/document.ts
-msgctxt "Type signatute type"
+msgctxt "Type signature"
 msgid "Type"
-msgstr "Typ"
+msgstr ""
 
 #: apps/remix/app/components/general/app-command-menu.tsx
 msgid "Type a command or search..."
 msgstr "Geben Sie einen Befehl ein oder suchen Sie..."
+
+#: packages/ui/primitives/signature-pad/signature-pad-type.tsx
+msgid "Type your signature"
+msgstr ""
 
 #: apps/remix/app/components/general/document-signing/document-signing-signature-field.tsx
 msgid "Typed signatures are not allowed. Please draw your signature."
@@ -9406,14 +9477,14 @@ msgid "Upgrade your plan to upload more documents"
 msgstr "Aktualisieren Sie Ihren Tarif, um mehr Dokumente hochzuladen"
 
 #: apps/remix/app/components/dialogs/template-use-dialog.tsx
-#: packages/ui/primitives/signature-pad/signature-pad.tsx
 msgid "Upload"
 msgstr "Hochladen"
 
+#: packages/ui/primitives/signature-pad/signature-pad.tsx
 #: packages/lib/constants/document.ts
-msgctxt "Upload signatute type"
+msgctxt "Upload signature"
 msgid "Upload"
-msgstr "Hochladen"
+msgstr ""
 
 #: apps/remix/app/components/dialogs/template-bulk-send-dialog.tsx
 msgid "Upload a CSV file to create multiple documents from this template. Each row represents one document with its recipient details."
@@ -10546,6 +10617,10 @@ msgstr "Derzeit haben Sie keinen Zugriff auf Teams in dieser Organisation. Bitte
 msgid "You do not have permission to create a token for this team"
 msgstr "Sie haben keine Berechtigung, ein Token für dieses Team zu erstellen"
 
+#: apps/remix/app/components/tables/user-billing-organisations-table.tsx
+msgid "You don't manage billing for any organisations."
+msgstr ""
+
 #: packages/email/template-components/template-document-cancel.tsx
 msgid "You don't need to sign it anymore."
 msgstr "Du musst es nicht mehr unterschreiben."
@@ -11040,4 +11115,3 @@ msgstr "Ihr Verifizierungscode:"
 #: apps/remix/app/routes/_authenticated+/o.$orgUrl.settings.sso.tsx
 msgid "your-domain.com another-domain.com"
 msgstr "your-domain.com another-domain.com"
-
