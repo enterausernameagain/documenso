@@ -17,8 +17,8 @@ export const BrandingLogo = ({ className, ...props }: BrandingLogoProps) => {
       {...props}
     >
       <image
-        href="/logo.png"
-        xlinkHref="/logo.png" // For older SVG/PDF compatibility
+        href="/redsolutions-logo.png"
+        xlinkHref="/redsolutions-logo.png" // For older SVG/PDF compatibility
         width="200"
         height="50"
         preserveAspectRatio="xMidYMid meet" // Centers and scales proportionally

@@ -2,5 +2,31 @@
 
 /* Optional: Global overrides if needed */
 body {
+  color: #000000;
   font-family: 'Inter', sans-serif;
+}
+
+/* RedSolutions Brand Colors */
+:root {
+  --primary: 210 100% 50%;
+  --primary-foreground: 0 0% 100%;
+}
+
+button[type="submit"], .btn-primary {
+  background-color: hsl(210, 100%, 50%) !important;
+}
+
+/* Fix text visibility */
+label, p, h1, h2, h3, span, a {
+  color: #000000 !important;
+}
+
+input {
+  color: #000000 !important;
+  background-color: #ffffff !important;
+}
+
+/* Change eye icon color to blue */
+svg[class*="lucide"] {
+  color: hsl(210, 100%, 50%) !important;
 }
