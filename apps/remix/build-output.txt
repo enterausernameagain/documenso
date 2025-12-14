@@ -1,0 +1,618 @@
+
+> @documenso/remix@2.0.11 build
+> ./.bin/build.sh
+
+[Build]: Extracting and compiling translations
+
+> @documenso/root@2.0.11 translate
+> npm run translate:extract && npm run translate:compile
+
+
+> @documenso/root@2.0.11 translate:extract
+> lingui extract --clean
+
+✔ 
+Catalog statistics for packages/lib/translations/{locale}/web: 
+┌─────────────┬─────────────┬─────────┐
+│ Language    │ Total count │ Missing │
+├─────────────┼─────────────┼─────────┤
+│ de          │    2307     │   18    │
+│ en (source) │    2307     │    -    │
+│ fr          │    2307     │   18    │
+│ es          │    2307     │   18    │
+│ it          │    2307     │   21    │
+│ pl          │    2307     │   21    │
+└─────────────┴─────────────┴─────────┘
+
+(Use "npm run translate:extract" to update catalogs with new messages.)
+(Use "npm run translate:compile" to compile catalogs for production. Alternatively, use bundler plugins: https://lingui.dev/ref/cli#compiling-catalogs-in-ci)
+
+> @documenso/root@2.0.11 translate:compile
+> lingui compile
+
+Compiling message catalogs…
+Done!
+[Build]: Building app
+
+> @documenso/remix@2.0.11 build:app
+> npm run typecheck && cross-env NODE_ENV=production react-router build
+
+
+> @documenso/remix@2.0.11 typecheck
+> react-router typegen && tsc
+
+vite v6.3.5 building for production...
+transforming...
+Browserslist: browsers data (caniuse-lite) is 7 months old. Please run:
+  npx update-browserslist-db@latest
+  Why you should do it regularly: https://github.com/browserslist/update-db#readme
+✓ 435 modules transformed.
+✗ Build failed in 9.50s
+[vite:css] [postcss] /Users/timlottjr/documenso/documenso/apps/remix/app/globals.css:1:1: The `border-border` class does not exist. If `border-border` is a custom class, make sure it is defined within a `@layer` directive.
+file: /Users/timlottjr/documenso/documenso/apps/remix/app/globals.css:1:0
+    at Input.error (/Users/timlottjr/documenso/documenso/node_modules/postcss/lib/input.js:113:16)
+    at AtRule.error (/Users/timlottjr/documenso/documenso/node_modules/postcss/lib/node.js:149:32)
+    at processApply (/Users/timlottjr/documenso/documenso/node_modules/tailwindcss/lib/lib/expandApplyAtRules.js:380:29)
+    at /Users/timlottjr/documenso/documenso/node_modules/tailwindcss/lib/lib/expandApplyAtRules.js:551:9
+    at /Users/timlottjr/documenso/documenso/node_modules/tailwindcss/lib/processTailwindFeatures.js:55:50
+    at plugins (/Users/timlottjr/documenso/documenso/node_modules/tailwindcss/lib/plugin.js:38:17)
+    at LazyResult.runAsync (/Users/timlottjr/documenso/documenso/node_modules/postcss/lib/lazy-result.js:293:11)
+    at runPostCSS (file:///Users/timlottjr/documenso/documenso/node_modules/vite/dist/node/chunks/dep-DBxKXgDP.js:43824:21)
+    at compilePostCSS (file:///Users/timlottjr/documenso/documenso/node_modules/vite/dist/node/chunks/dep-DBxKXgDP.js:43794:18)
+    at compileCSS (file:///Users/timlottjr/documenso/documenso/node_modules/vite/dist/node/chunks/dep-DBxKXgDP.js:43649:27)
+    at Object.handler (file:///Users/timlottjr/documenso/documenso/node_modules/vite/dist/node/chunks/dep-DBxKXgDP.js:42965:11)
+    at transform (file:///Users/timlottjr/documenso/documenso/node_modules/rollup/dist/es/shared/node-entry.js:20957:16)
+    at ModuleLoader.addModuleSource (file:///Users/timlottjr/documenso/documenso/node_modules/rollup/dist/es/shared/node-entry.js:21170:36) {
+  name: 'CssSyntaxError',
+  reason: 'The `border-border` class does not exist. If `border-border` is a custom class, make sure it is defined within a `@layer` directive.',
+  file: '/Users/timlottjr/documenso/documenso/apps/remix/app/globals.css',
+  source: '@tailwind base;\n' +
+    '@tailwind components;\n' +
+    '@tailwind utilities;\n' +
+    '\n' +
+    '@layer base {\n' +
+    '  :root {\n' +
+    '    --background: 0 0% 100%;\n' +
+    '    --foreground: 222.2 84% 4.9%;\n' +
+    '    --card: 0 0% 100%;\n' +
+    '    --card-foreground: 222.2 84% 4.9%;\n' +
+    '    --popover: 0 0% 100%;\n' +
+    '    --popover-foreground: 222.2 84% 4.9%;\n' +
+    '    --primary: 210 100% 50%;\n' +
+    '    --primary-foreground: 0 0% 100%;\n' +
+    '    --secondary: 210 40% 96.1%;\n' +
+    '    --secondary-foreground: 222.2 47.4% 11.2%;\n' +
+    '    --muted: 210 40% 96.1%;\n' +
+    '    --muted-foreground: 215.4 16.3% 46.9%;\n' +
+    '    --accent: 210 40% 96.1%;\n' +
+    '    --accent-foreground: 222.2 47.4% 11.2%;\n' +
+    '    --destructive: 0 84.2% 60.2%;\n' +
+    '    --destructive-foreground: 210 40% 98%;\n' +
+    '    --border: 214.3 31.8% 91.4%;\n' +
+    '    --input: 214.3 31.8% 91.4%;\n' +
+    '    --ring: 210 100% 50%;\n' +
+    '    --radius: 0.5rem;\n' +
+    '  }\n' +
+    '\n' +
+    '  .dark {\n' +
+    '    --background: 222.2 84% 4.9%;\n' +
+    '    --foreground: 210 40% 98%;\n' +
+    '    --card: 222.2 84% 4.9%;\n' +
+    '    --card-foreground: 210 40% 98%;\n' +
+    '    --popover: 222.2 84% 4.9%;\n' +
+    '    --popover-foreground: 210 40% 98%;\n' +
+    '    --primary: 210 100% 50%;\n' +
+    '    --primary-foreground: 0 0% 100%;\n' +
+    '    --secondary: 217.2 32.6% 17.5%;\n' +
+    '    --secondary-foreground: 210 40% 98%;\n' +
+    '    --muted: 217.2 32.6% 17.5%;\n' +
+    '    --muted-foreground: 215 20.2% 65.1%;\n' +
+    '    --accent: 217.2 32.6% 17.5%;\n' +
+    '    --accent-foreground: 210 40% 98%;\n' +
+    '    --destructive: 0 62.8% 30.6%;\n' +
+    '    --destructive-foreground: 210 40% 98%;\n' +
+    '    --border: 217.2 32.6% 17.5%;\n' +
+    '    --input: 217.2 32.6% 17.5%;\n' +
+    '    --ring: 210 100% 50%;\n' +
+    '  }\n' +
+    '}\n' +
+    '\n' +
+    '@layer base {\n' +
+    '  * {\n' +
+    '    @apply border-border;\n' +
+    '  }\n' +
+    '  body {\n' +
+    '    @apply bg-background text-foreground;\n' +
+    '  }\n' +
+    '}\n' +
+    '\n' +
+    '/* Force all green buttons to blue */\n' +
+    'button[class*="bg-green"],\n' +
+    'button[class*="bg-emerald"],\n' +
+    'button[class*="bg-documenso"],\n' +
+    '.bg-green-500,\n' +
+    '.bg-green-600,\n' +
+    '.bg-emerald-500,\n' +
+    '.bg-emerald-600,\n' +
+    '[class*="bg-documenso"] {\n' +
+    '  background-color: hsl(210, 100%, 50%) !important;\n' +
+    '  color: white !important;\n' +
+    '}\n' +
+    '\n' +
+    'button[class*="bg-green"]:hover,\n' +
+    'button[class*="bg-emerald"]:hover,\n' +
+    'button[class*="bg-documenso"]:hover,\n' +
+    '.bg-green-500:hover,\n' +
+    '.bg-green-600:hover,\n' +
+    '.bg-emerald-500:hover,\n' +
+    '.bg-emerald-600:hover,\n' +
+    '[class*="bg-documenso"]:hover {\n' +
+    '  background-color: hsl(210, 100%, 45%) !important;\n' +
+    '}\n' +
+    '\n' +
+    '/* Fix primary button colors */\n' +
+    'button[type="submit"],\n' +
+    '.btn-primary,\n' +
+    '[data-primary="true"] {\n' +
+    '  background-color: hsl(210, 100%, 50%) !important;\n' +
+    '  color: white !important;\n' +
+    '}\n' +
+    '\n' +
+    '/* Fix toast/notification backgrounds */\n' +
+    '[data-sonner-toast],\n' +
+    '[data-sonner-toaster],\n' +
+    '.toast,\n' +
+    '[role="alert"],\n' +
+    '[role="status"],\n' +
+    '[class*="Toaster"],\n' +
+    '[class*="toast"] {\n' +
+    '  background-color: hsl(0 0% 15%) !important;\n' +
+    '  border: 1px solid hsl(0 0% 25%) !important;\n' +
+    '  color: white !important;\n' +
+    '}\n' +
+    '\n' +
+    '[data-sonner-toast] [data-content],\n' +
+    '[data-sonner-toast] [data-title],\n' +
+    '[data-sonner-toast] [data-description] {\n' +
+    '  color: white !important;\n' +
+    '}\n' +
+    '\n' +
+    '/* Fix modal/dialog backgrounds */\n' +
+    '[role="dialog"],\n' +
+    '[data-radix-dialog-content],\n' +
+    '.modal,\n' +
+    '[class*="Dialog"] {\n' +
+    '  background-color: white !important;\n' +
+    '  color: black !important;\n' +
+    '}\n' +
+    '\n' +
+    '.dark [role="dialog"],\n' +
+    '.dark [data-radix-dialog-content],\n' +
+    '.dark .modal,\n' +
+    '.dark [class*="Dialog"] {\n' +
+    '  background-color: hsl(222.2 84% 4.9%) !important;\n' +
+    '  color: white !important;\n' +
+    '}\n' +
+    '\n' +
+    '/* Fix text visibility */\n' +
+    'label, p, h1, h2, h3, span, a {\n' +
+    '  color: inherit;\n' +
+    '}\n' +
+    '\n' +
+    '/* Ensure proper contrast */\n' +
+    '.dark {\n' +
+    '  color-scheme: dark;\n' +
+    '}\n',
+  line: 1,
+  column: 1,
+  endLine: 1,
+  endColumn: 16,
+  input: {
+    column: 1,
+    endColumn: 16,
+    endLine: 1,
+    line: 1,
+    source: '@tailwind base;\n' +
+      '@tailwind components;\n' +
+      '@tailwind utilities;\n' +
+      '\n' +
+      '@layer base {\n' +
+      '  :root {\n' +
+      '    --background: 0 0% 100%;\n' +
+      '    --foreground: 222.2 84% 4.9%;\n' +
+      '    --card: 0 0% 100%;\n' +
+      '    --card-foreground: 222.2 84% 4.9%;\n' +
+      '    --popover: 0 0% 100%;\n' +
+      '    --popover-foreground: 222.2 84% 4.9%;\n' +
+      '    --primary: 210 100% 50%;\n' +
+      '    --primary-foreground: 0 0% 100%;\n' +
+      '    --secondary: 210 40% 96.1%;\n' +
+      '    --secondary-foreground: 222.2 47.4% 11.2%;\n' +
+      '    --muted: 210 40% 96.1%;\n' +
+      '    --muted-foreground: 215.4 16.3% 46.9%;\n' +
+      '    --accent: 210 40% 96.1%;\n' +
+      '    --accent-foreground: 222.2 47.4% 11.2%;\n' +
+      '    --destructive: 0 84.2% 60.2%;\n' +
+      '    --destructive-foreground: 210 40% 98%;\n' +
+      '    --border: 214.3 31.8% 91.4%;\n' +
+      '    --input: 214.3 31.8% 91.4%;\n' +
+      '    --ring: 210 100% 50%;\n' +
+      '    --radius: 0.5rem;\n' +
+      '  }\n' +
+      '\n' +
+      '  .dark {\n' +
+      '    --background: 222.2 84% 4.9%;\n' +
+      '    --foreground: 210 40% 98%;\n' +
+      '    --card: 222.2 84% 4.9%;\n' +
+      '    --card-foreground: 210 40% 98%;\n' +
+      '    --popover: 222.2 84% 4.9%;\n' +
+      '    --popover-foreground: 210 40% 98%;\n' +
+      '    --primary: 210 100% 50%;\n' +
+      '    --primary-foreground: 0 0% 100%;\n' +
+      '    --secondary: 217.2 32.6% 17.5%;\n' +
+      '    --secondary-foreground: 210 40% 98%;\n' +
+      '    --muted: 217.2 32.6% 17.5%;\n' +
+      '    --muted-foreground: 215 20.2% 65.1%;\n' +
+      '    --accent: 217.2 32.6% 17.5%;\n' +
+      '    --accent-foreground: 210 40% 98%;\n' +
+      '    --destructive: 0 62.8% 30.6%;\n' +
+      '    --destructive-foreground: 210 40% 98%;\n' +
+      '    --border: 217.2 32.6% 17.5%;\n' +
+      '    --input: 217.2 32.6% 17.5%;\n' +
+      '    --ring: 210 100% 50%;\n' +
+      '  }\n' +
+      '}\n' +
+      '\n' +
+      '@layer base {\n' +
+      '  * {\n' +
+      '    @apply border-border;\n' +
+      '  }\n' +
+      '  body {\n' +
+      '    @apply bg-background text-foreground;\n' +
+      '  }\n' +
+      '}\n' +
+      '\n' +
+      '/* Force all green buttons to blue */\n' +
+      'button[class*="bg-green"],\n' +
+      'button[class*="bg-emerald"],\n' +
+      'button[class*="bg-documenso"],\n' +
+      '.bg-green-500,\n' +
+      '.bg-green-600,\n' +
+      '.bg-emerald-500,\n' +
+      '.bg-emerald-600,\n' +
+      '[class*="bg-documenso"] {\n' +
+      '  background-color: hsl(210, 100%, 50%) !important;\n' +
+      '  color: white !important;\n' +
+      '}\n' +
+      '\n' +
+      'button[class*="bg-green"]:hover,\n' +
+      'button[class*="bg-emerald"]:hover,\n' +
+      'button[class*="bg-documenso"]:hover,\n' +
+      '.bg-green-500:hover,\n' +
+      '.bg-green-600:hover,\n' +
+      '.bg-emerald-500:hover,\n' +
+      '.bg-emerald-600:hover,\n' +
+      '[class*="bg-documenso"]:hover {\n' +
+      '  background-color: hsl(210, 100%, 45%) !important;\n' +
+      '}\n' +
+      '\n' +
+      '/* Fix primary button colors */\n' +
+      'button[type="submit"],\n' +
+      '.btn-primary,\n' +
+      '[data-primary="true"] {\n' +
+      '  background-color: hsl(210, 100%, 50%) !important;\n' +
+      '  color: white !important;\n' +
+      '}\n' +
+      '\n' +
+      '/* Fix toast/notification backgrounds */\n' +
+      '[data-sonner-toast],\n' +
+      '[data-sonner-toaster],\n' +
+      '.toast,\n' +
+      '[role="alert"],\n' +
+      '[role="status"],\n' +
+      '[class*="Toaster"],\n' +
+      '[class*="toast"] {\n' +
+      '  background-color: hsl(0 0% 15%) !important;\n' +
+      '  border: 1px solid hsl(0 0% 25%) !important;\n' +
+      '  color: white !important;\n' +
+      '}\n' +
+      '\n' +
+      '[data-sonner-toast] [data-content],\n' +
+      '[data-sonner-toast] [data-title],\n' +
+      '[data-sonner-toast] [data-description] {\n' +
+      '  color: white !important;\n' +
+      '}\n' +
+      '\n' +
+      '/* Fix modal/dialog backgrounds */\n' +
+      '[role="dialog"],\n' +
+      '[data-radix-dialog-content],\n' +
+      '.modal,\n' +
+      '[class*="Dialog"] {\n' +
+      '  background-color: white !important;\n' +
+      '  color: black !important;\n' +
+      '}\n' +
+      '\n' +
+      '.dark [role="dialog"],\n' +
+      '.dark [data-radix-dialog-content],\n' +
+      '.dark .modal,\n' +
+      '.dark [class*="Dialog"] {\n' +
+      '  background-color: hsl(222.2 84% 4.9%) !important;\n' +
+      '  color: white !important;\n' +
+      '}\n' +
+      '\n' +
+      '/* Fix text visibility */\n' +
+      'label, p, h1, h2, h3, span, a {\n' +
+      '  color: inherit;\n' +
+      '}\n' +
+      '\n' +
+      '/* Ensure proper contrast */\n' +
+      '.dark {\n' +
+      '  color-scheme: dark;\n' +
+      '}\n',
+    url: 'file:///Users/timlottjr/documenso/documenso/apps/remix/app/globals.css',
+    file: '/Users/timlottjr/documenso/documenso/apps/remix/app/globals.css'
+  },
+  plugin: 'vite:css',
+  code: 'PLUGIN_ERROR',
+  loc: {
+    file: '/Users/timlottjr/documenso/documenso/apps/remix/app/globals.css',
+    line: 1,
+    column: 0
+  },
+  pluginCode: '@tailwind base;\n' +
+    '@tailwind components;\n' +
+    '@tailwind utilities;\n' +
+    '\n' +
+    '@layer base {\n' +
+    '  :root {\n' +
+    '    --background: 0 0% 100%;\n' +
+    '    --foreground: 222.2 84% 4.9%;\n' +
+    '    --card: 0 0% 100%;\n' +
+    '    --card-foreground: 222.2 84% 4.9%;\n' +
+    '    --popover: 0 0% 100%;\n' +
+    '    --popover-foreground: 222.2 84% 4.9%;\n' +
+    '    --primary: 210 100% 50%;\n' +
+    '    --primary-foreground: 0 0% 100%;\n' +
+    '    --secondary: 210 40% 96.1%;\n' +
+    '    --secondary-foreground: 222.2 47.4% 11.2%;\n' +
+    '    --muted: 210 40% 96.1%;\n' +
+    '    --muted-foreground: 215.4 16.3% 46.9%;\n' +
+    '    --accent: 210 40% 96.1%;\n' +
+    '    --accent-foreground: 222.2 47.4% 11.2%;\n' +
+    '    --destructive: 0 84.2% 60.2%;\n' +
+    '    --destructive-foreground: 210 40% 98%;\n' +
+    '    --border: 214.3 31.8% 91.4%;\n' +
+    '    --input: 214.3 31.8% 91.4%;\n' +
+    '    --ring: 210 100% 50%;\n' +
+    '    --radius: 0.5rem;\n' +
+    '  }\n' +
+    '\n' +
+    '  .dark {\n' +
+    '    --background: 222.2 84% 4.9%;\n' +
+    '    --foreground: 210 40% 98%;\n' +
+    '    --card: 222.2 84% 4.9%;\n' +
+    '    --card-foreground: 210 40% 98%;\n' +
+    '    --popover: 222.2 84% 4.9%;\n' +
+    '    --popover-foreground: 210 40% 98%;\n' +
+    '    --primary: 210 100% 50%;\n' +
+    '    --primary-foreground: 0 0% 100%;\n' +
+    '    --secondary: 217.2 32.6% 17.5%;\n' +
+    '    --secondary-foreground: 210 40% 98%;\n' +
+    '    --muted: 217.2 32.6% 17.5%;\n' +
+    '    --muted-foreground: 215 20.2% 65.1%;\n' +
+    '    --accent: 217.2 32.6% 17.5%;\n' +
+    '    --accent-foreground: 210 40% 98%;\n' +
+    '    --destructive: 0 62.8% 30.6%;\n' +
+    '    --destructive-foreground: 210 40% 98%;\n' +
+    '    --border: 217.2 32.6% 17.5%;\n' +
+    '    --input: 217.2 32.6% 17.5%;\n' +
+    '    --ring: 210 100% 50%;\n' +
+    '  }\n' +
+    '}\n' +
+    '\n' +
+    '@layer base {\n' +
+    '  * {\n' +
+    '    @apply border-border;\n' +
+    '  }\n' +
+    '  body {\n' +
+    '    @apply bg-background text-foreground;\n' +
+    '  }\n' +
+    '}\n' +
+    '\n' +
+    '/* Force all green buttons to blue */\n' +
+    'button[class*="bg-green"],\n' +
+    'button[class*="bg-emerald"],\n' +
+    'button[class*="bg-documenso"],\n' +
+    '.bg-green-500,\n' +
+    '.bg-green-600,\n' +
+    '.bg-emerald-500,\n' +
+    '.bg-emerald-600,\n' +
+    '[class*="bg-documenso"] {\n' +
+    '  background-color: hsl(210, 100%, 50%) !important;\n' +
+    '  color: white !important;\n' +
+    '}\n' +
+    '\n' +
+    'button[class*="bg-green"]:hover,\n' +
+    'button[class*="bg-emerald"]:hover,\n' +
+    'button[class*="bg-documenso"]:hover,\n' +
+    '.bg-green-500:hover,\n' +
+    '.bg-green-600:hover,\n' +
+    '.bg-emerald-500:hover,\n' +
+    '.bg-emerald-600:hover,\n' +
+    '[class*="bg-documenso"]:hover {\n' +
+    '  background-color: hsl(210, 100%, 45%) !important;\n' +
+    '}\n' +
+    '\n' +
+    '/* Fix primary button colors */\n' +
+    'button[type="submit"],\n' +
+    '.btn-primary,\n' +
+    '[data-primary="true"] {\n' +
+    '  background-color: hsl(210, 100%, 50%) !important;\n' +
+    '  color: white !important;\n' +
+    '}\n' +
+    '\n' +
+    '/* Fix toast/notification backgrounds */\n' +
+    '[data-sonner-toast],\n' +
+    '[data-sonner-toaster],\n' +
+    '.toast,\n' +
+    '[role="alert"],\n' +
+    '[role="status"],\n' +
+    '[class*="Toaster"],\n' +
+    '[class*="toast"] {\n' +
+    '  background-color: hsl(0 0% 15%) !important;\n' +
+    '  border: 1px solid hsl(0 0% 25%) !important;\n' +
+    '  color: white !important;\n' +
+    '}\n' +
+    '\n' +
+    '[data-sonner-toast] [data-content],\n' +
+    '[data-sonner-toast] [data-title],\n' +
+    '[data-sonner-toast] [data-description] {\n' +
+    '  color: white !important;\n' +
+    '}\n' +
+    '\n' +
+    '/* Fix modal/dialog backgrounds */\n' +
+    '[role="dialog"],\n' +
+    '[data-radix-dialog-content],\n' +
+    '.modal,\n' +
+    '[class*="Dialog"] {\n' +
+    '  background-color: white !important;\n' +
+    '  color: black !important;\n' +
+    '}\n' +
+    '\n' +
+    '.dark [role="dialog"],\n' +
+    '.dark [data-radix-dialog-content],\n' +
+    '.dark .modal,\n' +
+    '.dark [class*="Dialog"] {\n' +
+    '  background-color: hsl(222.2 84% 4.9%) !important;\n' +
+    '  color: white !important;\n' +
+    '}\n' +
+    '\n' +
+    '/* Fix text visibility */\n' +
+    'label, p, h1, h2, h3, span, a {\n' +
+    '  color: inherit;\n' +
+    '}\n' +
+    '\n' +
+    '/* Ensure proper contrast */\n' +
+    '.dark {\n' +
+    '  color-scheme: dark;\n' +
+    '}\n',
+  hook: 'transform',
+  id: '/Users/timlottjr/documenso/documenso/apps/remix/app/globals.css',
+  watchFiles: [
+    '/Users/timlottjr/documenso/documenso/apps/remix/app/routes/_authenticated+/_layout.tsx',
+    '/Users/timlottjr/documenso/documenso/apps/remix/app/entry.client.tsx',
+    '/Users/timlottjr/documenso/documenso/apps/remix/app/routes/_authenticated+/admin+/claims.tsx',
+    '/Users/timlottjr/documenso/documenso/apps/remix/app/root.tsx',
+    '/Users/timlottjr/documenso/documenso/apps/remix/app/routes/_authenticated+/admin+/_index.tsx',
+    '/Users/timlottjr/documenso/documenso/apps/remix/app/routes/_authenticated+/admin+/_layout.tsx',
+    '/Users/timlottjr/documenso/documenso/apps/remix/app/routes/_authenticated+/admin+/documents.$id.tsx',
+    '/Users/timlottjr/documenso/documenso/apps/remix/app/routes/_authenticated+/admin+/documents._index.tsx',
+    '/Users/timlottjr/documenso/documenso/apps/remix/app/routes/_authenticated+/admin+/organisation-insights.$id.tsx',
+    '/Users/timlottjr/documenso/documenso/apps/remix/app/routes/_authenticated+/admin+/organisation-insights._index.tsx',
+    '/Users/timlottjr/documenso/documenso/apps/remix/app/routes/_authenticated+/admin+/organisations.$id.tsx',
+    '/Users/timlottjr/documenso/documenso/apps/remix/app/routes/_authenticated+/admin+/organisations._index.tsx',
+    '/Users/timlottjr/documenso/documenso/apps/remix/app/routes/_authenticated+/admin+/site-settings.tsx',
+    '/Users/timlottjr/documenso/documenso/apps/remix/app/routes/_authenticated+/admin+/stats.tsx',
+    '/Users/timlottjr/documenso/documenso/apps/remix/app/routes/_authenticated+/admin+/users.$id.tsx',
+    '/Users/timlottjr/documenso/documenso/apps/remix/app/routes/_authenticated+/dashboard.tsx',
+    '/Users/timlottjr/documenso/documenso/apps/remix/app/routes/_authenticated+/admin+/users._index.tsx',
+    '/Users/timlottjr/documenso/documenso/apps/remix/app/routes/_authenticated+/inbox.tsx',
+    '/Users/timlottjr/documenso/documenso/apps/remix/app/routes/_authenticated+/o.$orgUrl._layout.tsx',
+    '/Users/timlottjr/documenso/documenso/apps/remix/app/routes/_authenticated+/o.$orgUrl._index.tsx',
+    '/Users/timlottjr/documenso/documenso/apps/remix/app/routes/_authenticated+/o.$orgUrl.settings._layout.tsx',
+    '/Users/timlottjr/documenso/documenso/apps/remix/app/routes/_authenticated+/o.$orgUrl.settings._index.tsx',
+    '/Users/timlottjr/documenso/documenso/apps/remix/app/routes/_authenticated+/o.$orgUrl.settings.billing.tsx',
+    '/Users/timlottjr/documenso/documenso/apps/remix/app/routes/_authenticated+/o.$orgUrl.settings.branding.tsx',
+    '/Users/timlottjr/documenso/documenso/apps/remix/app/routes/_authenticated+/o.$orgUrl.settings.document.tsx',
+    '/Users/timlottjr/documenso/documenso/apps/remix/app/routes/_authenticated+/o.$orgUrl.settings.email-domains.$id.tsx',
+    '/Users/timlottjr/documenso/documenso/apps/remix/app/routes/_authenticated+/o.$orgUrl.settings.email-domains._index.tsx',
+    '/Users/timlottjr/documenso/documenso/apps/remix/app/routes/_authenticated+/o.$orgUrl.settings.email.tsx',
+    '/Users/timlottjr/documenso/documenso/apps/remix/app/routes/_authenticated+/o.$orgUrl.settings.groups._index.tsx',
+    '/Users/timlottjr/documenso/documenso/apps/remix/app/routes/_authenticated+/o.$orgUrl.settings.members.tsx',
+    '/Users/timlottjr/documenso/documenso/apps/remix/app/routes/_authenticated+/o.$orgUrl.settings.general.tsx',
+    '/Users/timlottjr/documenso/documenso/apps/remix/app/routes/_authenticated+/o.$orgUrl.settings.groups.$id.tsx',
+    '/Users/timlottjr/documenso/documenso/apps/remix/app/routes/_authenticated+/o.$orgUrl.settings.sso.tsx',
+    '/Users/timlottjr/documenso/documenso/apps/remix/app/routes/_authenticated+/settings+/_layout.tsx',
+    '/Users/timlottjr/documenso/documenso/apps/remix/app/routes/_authenticated+/settings+/_dynamic_personal_routes+/_layout.tsx',
+    '/Users/timlottjr/documenso/documenso/apps/remix/app/routes/_authenticated+/settings+/_dynamic_personal_routes+/billing-personal.tsx',
+    '/Users/timlottjr/documenso/documenso/apps/remix/app/routes/_authenticated+/settings+/_dynamic_personal_routes+/branding.tsx',
+    '/Users/timlottjr/documenso/documenso/apps/remix/app/routes/_authenticated+/o.$orgUrl.settings.teams.tsx',
+    '/Users/timlottjr/documenso/documenso/apps/remix/app/routes/_authenticated+/o.$orgUrl.support.tsx',
+    '/Users/timlottjr/documenso/documenso/apps/remix/app/routes/_authenticated+/settings+/_dynamic_personal_routes+/document.tsx',
+    '/Users/timlottjr/documenso/documenso/apps/remix/app/routes/_authenticated+/settings+/_dynamic_personal_routes+/tokens.tsx',
+    '/Users/timlottjr/documenso/documenso/apps/remix/app/routes/_authenticated+/settings+/_dynamic_personal_routes+/public-profile.tsx',
+    '/Users/timlottjr/documenso/documenso/apps/remix/app/routes/_authenticated+/settings+/_dynamic_personal_routes+/webhooks.$id.tsx',
+    '/Users/timlottjr/documenso/documenso/apps/remix/app/routes/_authenticated+/settings+/_dynamic_personal_routes+/email.tsx',
+    '/Users/timlottjr/documenso/documenso/apps/remix/app/routes/_authenticated+/settings+/_dynamic_personal_routes+/webhooks._index.tsx',
+    '/Users/timlottjr/documenso/documenso/apps/remix/app/routes/_authenticated+/settings+/_index.tsx',
+    '/Users/timlottjr/documenso/documenso/apps/remix/app/routes/_authenticated+/settings+/billing.tsx',
+    '/Users/timlottjr/documenso/documenso/apps/remix/app/routes/_authenticated+/settings+/organisations.tsx',
+    '/Users/timlottjr/documenso/documenso/apps/remix/app/routes/_authenticated+/settings+/profile.tsx',
+    '/Users/timlottjr/documenso/documenso/apps/remix/app/routes/_authenticated+/settings+/security.activity.tsx',
+    '/Users/timlottjr/documenso/documenso/apps/remix/app/routes/_authenticated+/settings+/security.passkeys.tsx',
+    '/Users/timlottjr/documenso/documenso/apps/remix/app/routes/_authenticated+/settings+/security._index.tsx',
+    '/Users/timlottjr/documenso/documenso/apps/remix/app/routes/_authenticated+/settings+/security.linked-accounts.tsx',
+    '/Users/timlottjr/documenso/documenso/apps/remix/app/routes/_authenticated+/settings+/security.sessions.tsx',
+    '/Users/timlottjr/documenso/documenso/apps/remix/app/routes/_authenticated+/t.$teamUrl+/_layout.tsx',
+    '/Users/timlottjr/documenso/documenso/apps/remix/app/routes/_authenticated+/t.$teamUrl+/_index.tsx',
+    '/Users/timlottjr/documenso/documenso/apps/remix/app/routes/_authenticated+/t.$teamUrl+/documents.$id._layout.tsx',
+    '/Users/timlottjr/documenso/documenso/apps/remix/app/routes/_authenticated+/t.$teamUrl+/documents.$id._index.tsx',
+    '/Users/timlottjr/documenso/documenso/apps/remix/app/routes/_authenticated+/t.$teamUrl+/documents.$id.edit.tsx',
+    '/Users/timlottjr/documenso/documenso/apps/remix/app/routes/_authenticated+/t.$teamUrl+/documents.$id.legacy_editor.tsx',
+    '/Users/timlottjr/documenso/documenso/apps/remix/app/routes/_authenticated+/t.$teamUrl+/documents.$id.logs.tsx',
+    '/Users/timlottjr/documenso/documenso/apps/remix/app/routes/_authenticated+/t.$teamUrl+/documents._index.tsx',
+    '/Users/timlottjr/documenso/documenso/apps/remix/app/routes/_authenticated+/t.$teamUrl+/documents.f.$folderId._index.tsx',
+    '/Users/timlottjr/documenso/documenso/apps/remix/app/routes/_authenticated+/t.$teamUrl+/documents.folders._index.tsx',
+    '/Users/timlottjr/documenso/documenso/apps/remix/app/routes/_authenticated+/t.$teamUrl+/settings._layout.tsx',
+    '/Users/timlottjr/documenso/documenso/apps/remix/app/routes/_authenticated+/t.$teamUrl+/settings._index.tsx',
+    '/Users/timlottjr/documenso/documenso/apps/remix/app/routes/_authenticated+/t.$teamUrl+/settings.document.tsx',
+    '/Users/timlottjr/documenso/documenso/apps/remix/app/routes/_authenticated+/t.$teamUrl+/settings.branding.tsx',
+    '/Users/timlottjr/documenso/documenso/apps/remix/app/routes/_authenticated+/t.$teamUrl+/settings.email.tsx',
+    '/Users/timlottjr/documenso/documenso/apps/remix/app/routes/_authenticated+/t.$teamUrl+/settings.groups.tsx',
+    '/Users/timlottjr/documenso/documenso/apps/remix/app/routes/_authenticated+/t.$teamUrl+/settings.members.tsx',
+    '/Users/timlottjr/documenso/documenso/apps/remix/app/routes/_authenticated+/t.$teamUrl+/settings.public-profile.tsx',
+    '/Users/timlottjr/documenso/documenso/apps/remix/app/routes/_authenticated+/t.$teamUrl+/settings.tokens.tsx',
+    '/Users/timlottjr/documenso/documenso/apps/remix/app/routes/_authenticated+/t.$teamUrl+/settings.webhooks.$id.tsx',
+    '/Users/timlottjr/documenso/documenso/apps/remix/app/routes/_authenticated+/t.$teamUrl+/settings.webhooks._index.tsx',
+    '/Users/timlottjr/documenso/documenso/apps/remix/app/routes/_authenticated+/t.$teamUrl+/templates.$id._layout.tsx',
+    '/Users/timlottjr/documenso/documenso/apps/remix/app/routes/_authenticated+/t.$teamUrl+/templates.$id.edit.tsx',
+    '/Users/timlottjr/documenso/documenso/apps/remix/app/routes/_authenticated+/t.$teamUrl+/templates.$id._index.tsx',
+    '/Users/timlottjr/documenso/documenso/apps/remix/app/routes/_authenticated+/t.$teamUrl+/templates._index.tsx',
+    '/Users/timlottjr/documenso/documenso/apps/remix/app/routes/_authenticated+/t.$teamUrl+/templates.$id.legacy_editor.tsx',
+    '/Users/timlottjr/documenso/documenso/apps/remix/package.json',
+    '/Users/timlottjr/documenso/documenso/packages/lib/package.json',
+    '/Users/timlottjr/documenso/documenso/apps/remix/app/routes/_authenticated+/t.$teamUrl+/templates.f.$folderId._index.tsx',
+    '/Users/timlottjr/documenso/documenso/apps/remix/app/routes/_authenticated+/t.$teamUrl+/templates.folders._index.tsx',
+    '/Users/timlottjr/documenso/documenso/apps/remix/app/routes/_internal+/[__htmltopdf]+/audit-log.tsx',
+    '/Users/timlottjr/documenso/documenso/apps/remix/app/routes/_internal+/[__htmltopdf]+/certificate.tsx',
+    '/Users/timlottjr/documenso/documenso/apps/remix/app/routes/_index.tsx',
+    '/Users/timlottjr/documenso/documenso/apps/remix/app/routes/_profile+/_layout.tsx',
+    '/Users/timlottjr/documenso/documenso/apps/remix/app/routes/_profile+/p.$url.tsx',
+    '/Users/timlottjr/documenso/documenso/apps/remix/app/routes/_recipient+/_layout.tsx',
+    '/Users/timlottjr/documenso/documenso/apps/remix/app/routes/_recipient+/d.$token+/_index.tsx',
+    '/Users/timlottjr/documenso/documenso/apps/remix/app/routes/_recipient+/sign.$token+/complete.tsx',
+    '/Users/timlottjr/documenso/documenso/apps/remix/app/routes/_recipient+/sign.$token+/rejected.tsx',
+    '/Users/timlottjr/documenso/documenso/apps/remix/app/routes/_recipient+/sign.$token+/_index.tsx',
+    '/Users/timlottjr/documenso/documenso/apps/remix/app/routes/_recipient+/sign.$token+/waiting.tsx',
+    '/Users/timlottjr/documenso/documenso/apps/remix/app/routes/_redirects+/ingest.$.tsx',
+    '/Users/timlottjr/documenso/documenso/apps/remix/app/routes/_share+/_layout.tsx',
+    '/Users/timlottjr/documenso/documenso/apps/remix/app/routes/_share+/share.$slug.tsx',
+    '/Users/timlottjr/documenso/documenso/apps/remix/app/routes/_share+/share.$slug.opengraph.tsx',
+    '/Users/timlottjr/documenso/documenso/apps/remix/app/routes/_unauthenticated+/_layout.tsx',
+    ... 225 more items
+  ]
+}
+npm error Lifecycle script `build:app` failed with error:
+npm error code 1
+npm error path /Users/timlottjr/documenso/documenso/apps/remix
+npm error workspace @documenso/remix@2.0.11
+npm error location /Users/timlottjr/documenso/documenso/apps/remix
+npm error command failed
+npm error command sh -c npm run typecheck && cross-env NODE_ENV=production react-router build
+npm error Lifecycle script `build` failed with error:
+npm error code 1
+npm error path /Users/timlottjr/documenso/documenso/apps/remix
+npm error workspace @documenso/remix@2.0.11
+npm error location /Users/timlottjr/documenso/documenso/apps/remix
+npm error command failed
+npm error command sh -c ./.bin/build.sh

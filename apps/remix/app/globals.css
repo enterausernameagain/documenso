@@ -30,3 +30,18 @@ input {
 svg[class*="lucide"] {
   color: hsl(210, 100%, 50%) !important;
 }
+
+/* Custom branding overrides */
+button[class*="bg-documenso"],
+button[class*="bg-green"],
+.bg-documenso-500,
+.bg-green-500 {
+  background-color: hsl(210, 100%, 50%) !important;
+}
+
+button[class*="bg-documenso"]:hover,
+button[class*="bg-green"]:hover,
+.bg-documenso-500:hover,
+.bg-green-500:hover {
+  background-color: hsl(210, 100%, 45%) !important;
+}
