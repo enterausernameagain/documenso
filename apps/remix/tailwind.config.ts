@@ -2,6 +2,8 @@
 const baseConfig = require('@documenso/tailwind-config');
 const path = require('path');
 
+const baseTheme = baseConfig.theme ?? {};
+
 module.exports = {
   ...baseConfig,
   content: [
@@ -16,8 +18,11 @@ module.exports = {
     `${path.join(require.resolve('@documenso/email'), '..')}/providers/**/*.{ts,tsx}`,
   ],
   theme: {
+    ...baseTheme,
     extend: {
+      ...(baseTheme.extend ?? {}),
       colors: {
+        ...(baseTheme.extend?.colors ?? {}),
         primary: {
           DEFAULT: '#22C55E', // Main green (e.g., for buttons, accents)
           dark: '#16A34A',   // Darker variant for hover
@@ -32,6 +37,7 @@ module.exports = {
         // Add more shades or colors as per your specs
       },
       fontFamily: {
+        ...(baseTheme.extend?.fontFamily ?? {}),
         sans: ['Inter', 'sans-serif'], // Custom font (load via Google Fonts or local)
         mono: ['Courier New', 'monospace'], // Optional: for code blocks
       },
