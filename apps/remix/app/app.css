@@ -70,50 +70,50 @@
     --font-noto: 'Noto Sans', 'Noto Sans Korean', 'Noto Sans Japanese', 'Noto Sans Chinese';
 
     /* LIGHT MODE COLORS */
-    --brand-primary: #1e5bb8;
+    --brand-primary: #0052cc;
     --background: #ffffff;
-    --foreground: #111827;
-    --muted: #f3f4f6;
-    --muted-foreground: #6b7280;
+    --foreground: #010816;
+    --muted: #f7f9fb;
+    --muted-foreground: #737373;
     --popover: #ffffff;
-    --popover-foreground: #111827;
+    --popover-foreground: #010816;
     --card: #ffffff;
-    --card-foreground: #111827;
-    --border: #e5e7eb;
-    --input: #e5e7eb;
-    --primary: #1e5bb8;
+    --card-foreground: #010816;
+    --border: #e2e8f0;
+    --input: #e2e8f0;
+    --primary: #2462ea;
     --primary-foreground: #ffffff;
-    --secondary: #f3f4f6;
-    --secondary-foreground: #1f2937;
-    --accent: #f3f4f6;
-    --accent-foreground: #111827;
-    --destructive: #ef4444;
+    --secondary: #f7f9fb;
+    --secondary-foreground: #010816;
+    --accent: #e2e8f0;
+    --accent-foreground: #010816;
+    --destructive: #b91c1c;
     --destructive-foreground: #fef2f2;
-    --ring: rgba(30, 91, 184, 0.3);
+    --ring: rgba(36, 98, 234, 0.35);
     --radius: 0.5rem;
   }
 
   /* DARK MODE COLORS */
   .dark {
-    --brand-primary: #1e5bb8;
-    --background: #0a0a0a;
-    --foreground: #ffffff;
-    --muted: #1a1a1a;
-    --muted-foreground: #9ca3af;
-    --popover: #0a0a0a;
-    --popover-foreground: #ffffff;
-    --card: #0a0a0a;
-    --card-foreground: #ffffff;
-    --border: #1a1a1a;
-    --input: #1a1a1a;
-    --primary: #1e5bb8;
-    --primary-foreground: #ffffff;
-    --secondary: #1a1a1a;
-    --secondary-foreground: #ffffff;
-    --accent: #1a1a1a;
-    --accent-foreground: #ffffff;
-    --destructive: #7f1d1d;
-    --destructive-foreground: #fef2f2;
-    --ring: rgba(30, 91, 184, 0.5);
+    --brand-primary: #0059ff;
+    --background: #010816;
+    --foreground: #f7f9fb;
+    --muted: #0d1526;
+    --muted-foreground: #cbd5f5;
+    --popover: #010816;
+    --popover-foreground: #f7f9fb;
+    --card: #010816;
+    --card-foreground: #f7f9fb;
+    --border: #1f2a40;
+    --input: #1f2a40;
+    --primary: #3b82f5;
+    --primary-foreground: #010816;
+    --secondary: #0d1526;
+    --secondary-foreground: #f7f9fb;
+    --accent: #0d1526;
+    --accent-foreground: #f7f9fb;
+    --destructive: #ef4444;
+    --destructive-foreground: #0b1120;
+    --ring: rgba(59, 130, 245, 0.5);
   }
 }

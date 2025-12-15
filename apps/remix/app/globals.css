@@ -2,33 +2,45 @@
 
 /* Optional: Global overrides if needed */
 body {
-  color: #000000;
+  color: hsl(var(--foreground));
+  background-color: hsl(var(--background));
   font-family: 'Inter', sans-serif;
 }
 
 /* RedSolutions Brand Colors */
 :root {
-  --primary: 210 100% 50%;
-  --primary-foreground: 0 0% 100%;
+  --primary: 221 82% 53%; /* #2462ea */
+  --primary-foreground: 0 0% 100%; /* #ffffff */
+  --foreground: 220 91% 5%; /* #010816 */
+  --background: 0 0% 100%; /* #ffffff */
+  --muted-foreground: 0 0% 44%; /* #707070 */
+}
+
+.dark {
+  --primary: 217 90% 60%; /* #3b82f5 */
+  --primary-foreground: 216 100% 40%; /* #0052cc */
+  --foreground: 210 33% 97%; /* #f7f9fb */
+  --background: 220 91% 5%; /* #010816 */
+  --muted-foreground: 210 33% 85%; /* #cbd5f5 */
 }
 
 button[type="submit"], .btn-primary {
-  background-color: hsl(210, 100%, 50%) !important;
+  background-color: hsl(var(--primary)) !important;
 }
 
 /* Fix text visibility */
 label, p, h1, h2, h3, span, a {
-  color: #000000 !important;
+  color: hsl(var(--foreground)) !important;
 }
 
 input {
-  color: #000000 !important;
-  background-color: #ffffff !important;
+  color: hsl(var(--foreground)) !important;
+  background-color: hsl(var(--background)) !important;
 }
 
 /* Change eye icon color to blue */
 svg[class*="lucide"] {
-  color: hsl(210, 100%, 50%) !important;
+  color: hsl(var(--primary)) !important;
 }
 
 /* Custom branding overrides */
@@ -36,12 +48,12 @@ button[class*="bg-documenso"],
 button[class*="bg-green"],
 .bg-documenso-500,
 .bg-green-500 {
-  background-color: hsl(210, 100%, 50%) !important;
+  background-color: hsl(var(--primary)) !important;
 }
 
 button[class*="bg-documenso"]:hover,
 button[class*="bg-green"]:hover,
 .bg-documenso-500:hover,
 .bg-green-500:hover {
-  background-color: hsl(210, 100%, 45%) !important;
+  background-color: hsl(221, 82%, 48%) !important;
 }

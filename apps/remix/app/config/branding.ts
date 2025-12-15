@@ -19,8 +19,8 @@ export const BRANDING = {
   // Color scheme (HSL format for light/dark mode compatibility)
   colors: {
     primary: {
-      hsl: '210 100% 50%',
-      hex: '#0080FF',
+      hsl: '216 100% 40%',
+      hex: '#0052cc',
     },
     primaryForeground: {
       hsl: '0 0% 100%',
