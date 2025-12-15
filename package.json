@@ -91,6 +91,8 @@
     "zod": "^3.25.76"
   },
   "overrides": {
+    "@hookform/resolvers": "^3.9.1",
+    "react-hook-form": "^7.53.2",
     "zod": "^3.25.76"
   },
   "trigger.dev": {
