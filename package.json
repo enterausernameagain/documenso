@@ -67,7 +67,6 @@
     "rimraf": "^5.0.1",
     "superjson": "^2.2.5",
     "trpc-to-openapi": "2.4.0",
-    "turbo": "^1.9.3",
     "vite": "^6.3.5",
     "vite-plugin-static-copy": "^3.1.4",
     "zod-openapi": "^4.2.4",
@@ -87,6 +86,7 @@
     "luxon": "^3.5.0",
     "mupdf": "^1.0.0",
     "react": "^18",
+    "turbo": "^1.9.3",
     "typescript": "5.6.2",
     "zod": "^3.25.76"
   },
