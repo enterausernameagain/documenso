@@ -21,9 +21,46 @@ label, p, h1, h2, h3, span, a {
   color: #000000 !important;
 }
 
-input {
-  color: #000000 !important;
-  background-color: #ffffff !important;
+input,
+textarea,
+select {
+  color: #010816 !important;
+  background-color: hsl(var(--card)) !important;
+  border-color: hsl(var(--border)) !important;
+}
+
+input::placeholder,
+textarea::placeholder {
+  color: #707070 !important;
+}
+
+.dark input,
+.dark textarea,
+.dark select {
+  color: #f7f9fb !important;
+  background-color: hsl(var(--card)) !important;
+  border-color: hsl(var(--border)) !important;
+}
+
+.dark input::placeholder,
+.dark textarea::placeholder {
+  color: #737373 !important;
+}
+
+input:-webkit-autofill,
+textarea:-webkit-autofill,
+select:-webkit-autofill {
+  -webkit-text-fill-color: #010816 !important;
+  box-shadow: 0 0 0px 1000px hsl(var(--card)) inset !important;
+  border-color: hsl(var(--border)) !important;
+}
+
+.dark input:-webkit-autofill,
+.dark textarea:-webkit-autofill,
+.dark select:-webkit-autofill {
+  -webkit-text-fill-color: #f7f9fb !important;
+  box-shadow: 0 0 0px 1000px hsl(var(--card)) inset !important;
+  border-color: hsl(var(--border)) !important;
 }
 
 /* Change eye icon color to blue */

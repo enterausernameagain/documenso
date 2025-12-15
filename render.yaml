@@ -7,10 +7,10 @@ services:
     startCommand: npx prisma migrate deploy --schema packages/prisma/schema.prisma && npx turbo run start --filter=@documenso/remix
     healthCheckPath: /api/health
 
-    envVars:
-      # Node Version
-      - key: NODE_VERSION
-        value: 20
+      envVars:
+        # Node Version
+        - key: NODE_VERSION
+          value: 22
 
       - key: PORT
         value: 10000
