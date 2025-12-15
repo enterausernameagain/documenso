@@ -2,7 +2,7 @@
   "private": true,
   "version": "2.0.11",
   "scripts": {
-    "build": "turbo run build",
+    "build": "node scripts/run-turbo-or-workspaces.cjs build",
     "dev": "turbo run dev --filter=@documenso/remix",
     "dev:remix": "turbo run dev --filter=@documenso/remix",
     "dev:docs": "turbo run dev --filter=@documenso/documentation",

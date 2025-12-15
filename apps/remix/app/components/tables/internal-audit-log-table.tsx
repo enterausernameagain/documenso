@@ -29,15 +29,15 @@ const dateFormat: DateTimeFormatOptions = {
 
 const getAuditLogIndicatorColor = (type: string) =>
   match(type)
-    .with(DOCUMENT_AUDIT_LOG_TYPE.DOCUMENT_RECIPIENT_COMPLETED, () => 'bg-green-500')
-    .with(DOCUMENT_AUDIT_LOG_TYPE.DOCUMENT_RECIPIENT_REJECTED, () => 'bg-red-500')
-    .with(DOCUMENT_AUDIT_LOG_TYPE.DOCUMENT_SENT, () => 'bg-orange-500')
+    .with(DOCUMENT_AUDIT_LOG_TYPE.DOCUMENT_RECIPIENT_COMPLETED, () => 'bg-primary')
+    .with(DOCUMENT_AUDIT_LOG_TYPE.DOCUMENT_RECIPIENT_REJECTED, () => 'bg-destructive')
+    .with(DOCUMENT_AUDIT_LOG_TYPE.DOCUMENT_SENT, () => 'bg-warning')
     .with(
       P.union(
         DOCUMENT_AUDIT_LOG_TYPE.DOCUMENT_FIELD_INSERTED,
         DOCUMENT_AUDIT_LOG_TYPE.DOCUMENT_FIELD_UNINSERTED,
       ),
-      () => 'bg-blue-500',
+      () => 'bg-secondary',
     )
     .otherwise(() => 'bg-muted');
 

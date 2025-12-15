@@ -16,8 +16,12 @@ cd "$WEB_APP_DIR"
 
 start_time=$(date +%s)
 
-echo "[Build]: Extracting and compiling translations"
-npm run translate --prefix ../../
+if command -v lingui >/dev/null 2>&1; then
+  echo "[Build]: Extracting and compiling translations"
+  npm run translate --prefix ../../
+else
+  echo "[Build]: Skipping translation extraction (lingui CLI not installed)"
+fi
 
 echo "[Build]: Building app"
 npm run build:app
