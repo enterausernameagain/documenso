@@ -1,10 +1,18 @@
 @layer base {
-  :root {
-    --primary: var(--brand-primary);
-    --primary-foreground: var(--brand-primary-foreground);
-  }
-
   * {
     border-color: hsl(var(--border));
+  }
+
+  input,
+  textarea,
+  select {
+    color: hsl(var(--foreground));
+    background-color: hsl(var(--background));
+  }
+
+  input::placeholder,
+  textarea::placeholder,
+  select::placeholder {
+    color: hsl(var(--muted-foreground));
   }
 }
