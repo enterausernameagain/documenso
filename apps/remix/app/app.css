@@ -70,19 +70,27 @@
     --font-noto: 'Noto Sans', 'Noto Sans Korean', 'Noto Sans Japanese', 'Noto Sans Chinese';
 
     /* LIGHT MODE COLORS */
-    --brand-primary: 221.21 82.5% 52.94%;
+    --brand-primary: 210 100% 50%;
     --brand-primary-foreground: 0 0% 100%;
+    --brand-secondary: 210 100% 50%;
+    --brand-secondary-foreground: 0 0% 100%;
     --primary: var(--brand-primary);
     --primary-foreground: var(--brand-primary-foreground);
+    --secondary: var(--brand-secondary);
+    --secondary-foreground: var(--brand-secondary-foreground);
     --ring: var(--brand-primary);
   }
 
   /* DARK MODE COLORS */
   .dark {
-    --brand-primary: 217.1 90.29% 59.61%;
+    --brand-primary: 210 100% 50%;
     --brand-primary-foreground: 0 0% 100%;
+    --brand-secondary: 210 100% 50%;
+    --brand-secondary-foreground: 0 0% 100%;
     --primary: var(--brand-primary);
     --primary-foreground: var(--brand-primary-foreground);
+    --secondary: var(--brand-secondary);
+    --secondary-foreground: var(--brand-secondary-foreground);
     --ring: var(--brand-primary);
   }
 }

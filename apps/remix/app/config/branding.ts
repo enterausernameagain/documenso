@@ -26,6 +26,14 @@ export const BRANDING = {
       hsl: '0 0% 100%',
       hex: '#FFFFFF',
     },
+    secondary: {
+      hsl: '210 100% 50%',
+      hex: '#0080FF',
+    },
+    secondaryForeground: {
+      hsl: '0 0% 100%',
+      hex: '#FFFFFF',
+    },
   },
 
   // Typography

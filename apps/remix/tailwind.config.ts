@@ -2,20 +2,25 @@
 const baseConfig = require('@documenso/tailwind-config');
 const path = require('path');
 
+const { BRANDING } = require('./app/config/branding');
+
+const brandingPrimary = BRANDING.colors.primary?.hsl ?? '221.21 82.5% 52.94%';
+const brandingPrimaryForeground =
+  BRANDING.colors.primaryForeground?.hsl ?? '0 0% 100%';
+const brandingSecondary = BRANDING.colors.secondary?.hsl ?? brandingPrimary;
+const brandingSecondaryForeground =
+  BRANDING.colors.secondaryForeground?.hsl ?? brandingPrimaryForeground;
+
 const remixExtend = {
   colors: {
     primary: {
-      DEFAULT: '#22C55E', // Main green (e.g., for buttons, accents)
-      dark: '#16A34A', // Darker variant for hover
+      DEFAULT: `hsl(var(--primary, ${brandingPrimary}))`,
+      foreground: `hsl(var(--primary-foreground, ${brandingPrimaryForeground}))`,
     },
     secondary: {
-      DEFAULT: '#3B82F6', // Blue for links or secondary actions
-      dark: '#1D4ED8',
+      DEFAULT: `hsl(var(--secondary, ${brandingSecondary}))`,
+      foreground: `hsl(var(--secondary-foreground, ${brandingSecondaryForeground}))`,
     },
-    accent: '#EAB308', // Yellow for highlights/warnings
-    background: '#F3F4F6', // Light gray for app background
-    text: '#1F2937', // Dark gray for body text
-    // Add more shades or colors as per your specs
   },
   fontFamily: {
     sans: ['Inter', 'sans-serif'], // Custom font (load via Google Fonts or local)
