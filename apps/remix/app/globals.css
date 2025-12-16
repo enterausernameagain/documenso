@@ -1,9 +1,4 @@
 @layer base {
-  :root {
-    --primary: var(--brand-primary);
-    --primary-foreground: var(--brand-primary-foreground);
-  }
-
   * {
     border-color: hsl(var(--border));
   }

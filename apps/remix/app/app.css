@@ -70,19 +70,19 @@
     --font-noto: 'Noto Sans', 'Noto Sans Korean', 'Noto Sans Japanese', 'Noto Sans Chinese';
 
     /* LIGHT MODE COLORS */
-    --brand-primary: 221.21 82.5% 52.94%;
-    --brand-primary-foreground: 0 0% 100%;
-    --primary: var(--brand-primary);
-    --primary-foreground: var(--brand-primary-foreground);
-    --ring: var(--brand-primary);
+    --primary: 221.21 82.5% 52.94%;
+    --primary-foreground: 0 0% 100%;
+    --brand-primary: var(--primary);
+    --brand-primary-foreground: var(--primary-foreground);
+    --ring: var(--primary);
   }
 
   /* DARK MODE COLORS */
   .dark {
-    --brand-primary: 217.1 90.29% 59.61%;
-    --brand-primary-foreground: 0 0% 100%;
-    --primary: var(--brand-primary);
-    --primary-foreground: var(--brand-primary-foreground);
-    --ring: var(--brand-primary);
+    --primary: 217.1 90.29% 59.61%;
+    --primary-foreground: 0 0% 100%;
+    --brand-primary: var(--primary);
+    --brand-primary-foreground: var(--primary-foreground);
+    --ring: var(--primary);
   }
 }
