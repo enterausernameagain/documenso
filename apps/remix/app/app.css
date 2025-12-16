@@ -70,19 +70,65 @@
     --font-noto: 'Noto Sans', 'Noto Sans Korean', 'Noto Sans Japanese', 'Noto Sans Chinese';
 
     /* LIGHT MODE COLORS */
-    --brand-primary: 221.21 82.5% 52.94%;
-    --brand-primary-foreground: 0 0% 100%;
-    --primary: var(--brand-primary);
-    --primary-foreground: var(--brand-primary-foreground);
-    --ring: var(--brand-primary);
+    --background: 220 14% 95.88%;
+    --foreground: 215 27.91% 16.86%;
+
+    --card: var(--background);
+    --card-foreground: var(--foreground);
+
+    --popover: var(--background);
+    --popover-foreground: var(--foreground);
+
+    --border: 220 14% 90%;
+    --input: 220 14% 90%;
+
+    --muted: 220 14% 90%;
+    --muted-foreground: 215 16% 35%;
+
+    --primary: 142.09 70.56% 45.29%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 217.22 91.22% 59.8%;
+    --secondary-foreground: 0 0% 100%;
+
+    --accent: 45.4 93.39% 47.45%;
+    --accent-foreground: 0 0% 10%;
+
+    --destructive: 0 72% 50%;
+    --destructive-foreground: 0 0% 100%;
+
+    --ring: var(--primary);
   }
 
   /* DARK MODE COLORS */
   .dark {
-    --brand-primary: 217.1 90.29% 59.61%;
-    --brand-primary-foreground: 0 0% 100%;
-    --primary: var(--brand-primary);
-    --primary-foreground: var(--brand-primary-foreground);
-    --ring: var(--brand-primary);
+    --background: 215 27.91% 16.86%;
+    --foreground: 220 14% 95.88%;
+
+    --card: var(--background);
+    --card-foreground: var(--foreground);
+
+    --popover: var(--background);
+    --popover-foreground: var(--foreground);
+
+    --border: 215 16% 30%;
+    --input: 215 16% 30%;
+
+    --muted: 215 16% 30%;
+    --muted-foreground: 220 14% 85%;
+
+    --primary: 142.13 76.22% 36.27%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 224.28 76.33% 48.04%;
+    --secondary-foreground: 0 0% 100%;
+
+    --accent: 45.4 93.39% 47.45%;
+    --accent-foreground: 0 0% 10%;
+
+    --destructive: 0 72% 50%;
+    --destructive-foreground: 0 0% 100%;
+
+    --ring: var(--primary);
   }
 }
