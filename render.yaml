@@ -3,15 +3,14 @@ services:
     runtime: node
     name: documenso-app
     plan: free
-    # Use npm ci with dev dependencies included to ensure build tooling (tsc, react-router, etc.) is available.
-    buildCommand: npm ci --include=dev && npm run build
+    buildCommand: npm i && npm run build
     startCommand: npx prisma migrate deploy --schema packages/prisma/schema.prisma && npx turbo run start --filter=@documenso/remix
     healthCheckPath: /api/health
 
     envVars:
       # Node Version
       - key: NODE_VERSION
-        value: 22.11.0
+        value: 18.17.0
 
       - key: PORT
         value: 10000
@@ -28,18 +27,18 @@ services:
       # Database
       - key: NEXT_PRIVATE_DATABASE_URL
         fromDatabase:
-          name: documenso-db-free
+          name: documenso-db
           property: connectionString
 
       - key: NEXT_PRIVATE_DIRECT_DATABASE_URL
         fromDatabase:
-          name: documenso-db-free
+          name: documenso-db
           property: connectionString
 
       # URLs
       - key: NEXT_PUBLIC_WEBAPP_URL
         fromService:
-          name: documenso-app-free
+          name: documenso-app
           type: web
           envVarKey: RENDER_EXTERNAL_URL
       - key: NEXT_PRIVATE_INTERNAL_WEBAPP_URL
@@ -148,10 +147,5 @@ services:
         sync: false
 
 databases:
-<<<<<<< HEAD
   - name: documenso-db
     plan: free
-=======
-  - name: documenso-db-free
-    plan: free
->>>>>>> d0b7e8a38 (fix(render): use new database name to avoid plan downgrade)
