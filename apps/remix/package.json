@@ -3,8 +3,8 @@
   "private": true,
   "type": "module",
   "scripts": {
-    "build": "./.bin/build.sh",
-    "build:app": "bash -lc 'if [ \"$SKIP_TYPECHECK\" = \"1\" ]; then cross-env NODE_ENV=production react-router build; else npm run typecheck && cross-env NODE_ENV=production react-router build; fi'",
+    "build": "bash ./.bin/build.sh",
+    "build:app": "bash -lc 'if [ \"${SKIP_TYPECHECK}\" = \"1\" ]; then NODE_ENV=production react-router build; else npm run typecheck && NODE_ENV=production react-router build; fi'",
     "build:server": "cross-env NODE_ENV=production rollup -c rollup.config.mjs",
     "dev": "npm run with:env -- react-router dev",
     "dev:billing": "bash .bin/stripe-dev.sh",
