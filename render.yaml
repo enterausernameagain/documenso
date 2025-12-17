@@ -17,10 +17,8 @@ services:
 
       # Auth
       - key: NEXTAUTH_URL
-        fromService:
-          name: documenso-app
-          type: web
-          envVarKey: RENDER_EXTERNAL_URL
+        value: http://sign.redsolutions.org
+
       - key: NEXTAUTH_SECRET
         generateValue: true
 
@@ -37,10 +35,8 @@ services:
 
       # URLs
       - key: NEXT_PUBLIC_WEBAPP_URL
-        fromService:
-          name: documenso-app
-          type: web
-          envVarKey: RENDER_EXTERNA_URL
+        value: https://sign.redsolutions.org
+
       - key: NEXT_PRIVATE_INTERNAL_WEBAPP_URL
         value: 'http://localhost:10000'
 
