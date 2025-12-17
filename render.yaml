@@ -28,18 +28,18 @@ services:
       # Database
       - key: NEXT_PRIVATE_DATABASE_URL
         fromDatabase:
-          name: documenso-db
+          name: documenso-db-free
           property: connectionString
 
       - key: NEXT_PRIVATE_DIRECT_DATABASE_URL
         fromDatabase:
-          name: documenso-db
+          name: documenso-db-free
           property: connectionString
 
       # URLs
       - key: NEXT_PUBLIC_WEBAPP_URL
         fromService:
-          name: documenso-app
+          name: documenso-app-free
           type: web
           envVarKey: RENDER_EXTERNAL_URL
       - key: NEXT_PRIVATE_INTERNAL_WEBAPP_URL
@@ -148,5 +148,10 @@ services:
         sync: false
 
 databases:
+<<<<<<< HEAD
   - name: documenso-db
     plan: free
+=======
+  - name: documenso-db-free
+    plan: free
+>>>>>>> d0b7e8a38 (fix(render): use new database name to avoid plan downgrade)
