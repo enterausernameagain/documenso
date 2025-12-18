@@ -9,7 +9,7 @@
     "prebuild": "prisma generate",
     "format": "prisma format",
     "clean": "rimraf node_modules",
-    "post-install": "prisma generate",
+    "postinstall": "prisma generate",
     "prisma:generate": "prisma generate",
     "prisma:migrate-dev": "prisma migrate dev --skip-seed",
     "prisma:migrate-deploy": "prisma migrate deploy",
@@ -21,10 +21,10 @@
     "seed": "tsx ./seed-database.ts"
   },
   "dependencies": {
-    "@prisma/client": "^6.19.0",
+    "@prisma/client": "5.19.1",
     "kysely": "0.28.8",
     "nanoid": "^5.1.6",
-    "prisma": "^6.19.0",
+    "prisma": "5.19.1",
     "prisma-extension-kysely": "^3.0.0",
     "prisma-kysely": "^2.2.1",
     "prisma-json-types-generator": "^3.6.2",

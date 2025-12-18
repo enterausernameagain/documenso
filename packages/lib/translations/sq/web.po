@@ -8073,7 +8073,7 @@ msgid "Welcome back! Here's an overview of your account."
 msgstr "Mirë se vini përsëri! Këtu është një përmbledhje e llogarisë tuaj."
 
 #: packages/email/template-components/template-confirmation-email.tsx
-msgid "Welcome to Documenso!"
+msgid "Welcome to Redsolutions eSign!"
 msgstr "Mirësevini në Documenso!"
 
 #: apps/remix/app/routes/_recipient+/sign.$token+/waiting.tsx

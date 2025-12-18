@@ -1,19 +1,11 @@
 {
-  "name": "Documenso",
-  "short_name": "Documenso",
+  "name": "Redsolutions eSign",
+  "short_name": "eSign",
   "icons": [
-    {
-      "src": "/android-chrome-192x192.png",
-      "sizes": "192x192",
-      "type": "image/png"
-    },
-    {
-      "src": "/android-chrome-512x512.png",
-      "sizes": "512x512",
-      "type": "image/png"
-    }
+    { "src": "/android-chrome-192x192.png", "sizes": "192x192", "type": "image/png" },
+    { "src": "/android-chrome-512x512.png", "sizes": "512x512", "type": "image/png" }
   ],
-  "theme_color": "#A2E771",
-  "background_color": "#FFFFFF",
+  "theme_color": "#0B5BD3",
+  "background_color": "#0B5BD3",
   "display": "standalone"
 }
