@@ -69,12 +69,16 @@ export default function SignIn({ loaderData }: Route.ComponentProps) {
 
   return (
     <div className="w-screen max-w-lg px-4">
-      <div className="border-border dark:bg-background z-10 rounded-xl border bg-neutral-100 p-6">
+      <div className="z-10 rounded-xl border border-border bg-neutral-100 p-6 dark:bg-background">
+        <div className="mb-4 flex items-center justify-center">
+          <img src="/red-favicon.svg" alt="Redsolutions" className="h-10 w-auto opacity-90" />
+        </div>
+
         <h1 className="text-2xl font-semibold">
           <Trans>Sign in to your account</Trans>
         </h1>
 
-        <p className="text-muted-foreground mt-2 text-sm">
+        <p className="mt-2 text-sm text-muted-foreground">
           <Trans>Welcome back, we are lucky to have you.</Trans>
         </p>
         <hr className="-mx-6 my-4" />
@@ -88,7 +92,7 @@ export default function SignIn({ loaderData }: Route.ComponentProps) {
         />
 
         {!isEmbeddedRedirect && env('NEXT_PUBLIC_DISABLE_SIGNUP') !== 'true' && (
-          <p className="text-muted-foreground mt-6 text-center text-sm">
+          <p className="mt-6 text-center text-sm text-muted-foreground">
             <Trans>
               Don't have an account?{' '}
               <Link
