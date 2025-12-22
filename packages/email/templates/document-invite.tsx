@@ -74,13 +74,13 @@ export const DocumentInviteEmailTemplate = ({
                       : branding.brandingLogo
                   }
                   alt="Branding Logo"
-                  className="mb-4 h-9"
+                  className="mb-4 h-12 w-auto"
                 />
               ) : (
                 <Img
                   src={getAssetUrl('/static/logo.png')}
                   alt="Redsolutions Logo"
-                  className="mb-4 h-9"
+                  className="mb-4 h-12 w-auto"
                 />
               )}
 
