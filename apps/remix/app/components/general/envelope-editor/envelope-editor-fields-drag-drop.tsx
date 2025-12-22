@@ -263,7 +263,7 @@ export const EnvelopeEditorFieldDragDrop = ({
   }, [onMouseClick, onMouseMove, selectedField]);
 
   const selectedRecipientColor = useMemo(() => {
-    return selectedRecipientId ? getRecipientColorKey(selectedRecipientId) : 'green';
+    return selectedRecipientId ? getRecipientColorKey(selectedRecipientId) : 'blue';
   }, [selectedRecipientId, getRecipientColorKey]);
 
   return (
@@ -287,7 +287,7 @@ export const EnvelopeEditorFieldDragDrop = ({
                 'flex items-center justify-center gap-x-1.5 font-noto text-sm font-normal text-muted-foreground group-data-[selected]:text-foreground',
                 field.className,
                 {
-                  'group-hover:text-recipient-blue': selectedRecipientColor === 'green',
+                  'group-hover:text-recipient-blue': selectedRecipientColor === 'blue',
                   'group-hover:text-recipient-blue': selectedRecipientColor === 'blue',
                   'group-hover:text-recipient-purple': selectedRecipientColor === 'purple',
                   'group-hover:text-recipient-orange': selectedRecipientColor === 'orange',
