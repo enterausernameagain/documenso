@@ -87,6 +87,7 @@ export const AppNavMobile = ({ isMenuOpen, onMenuOpenChange }: AppNavMobileProps
         <Link to="/" onClick={handleMenuItemClick}>
           <img
             src={LogoImage}
+            style={{ width: '75%', height: '75%' }}
             alt="Redsolutions Logo"
             className="dark:invert"
             width={170}
