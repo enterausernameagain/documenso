@@ -89,7 +89,7 @@ export const AppNavMobile = ({ isMenuOpen, onMenuOpenChange }: AppNavMobileProps
             src={LogoImage}
             style={{ width: '75%', height: '75%' }}
             alt="Redsolutions Logo"
-            className="dark:invert"
+            className=""
             width={170}
             height={25}
           />
