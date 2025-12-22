@@ -8,7 +8,7 @@ export type LogoProps = ImgHTMLAttributes<HTMLImageElement>;
 export const BrandingLogo = ({ className, ...props }: LogoProps) => {
   return (
     <img
-      src="/static/logo.png"
+      src="/red-favcon.svg"
       alt="Redsolutions"
       decoding="async"
       loading="eager"
