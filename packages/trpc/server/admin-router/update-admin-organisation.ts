@@ -50,7 +50,15 @@ export const updateAdminOrganisationRoute = adminProcedure
         id: organisation.organisationClaimId,
       },
       data: {
-        ...claims,
+        ...(claims ?? {}),
+        ...(claims?.flags
+          ? {
+              flags: {
+                ...(organisation.organisationClaim.flags as Record<string, unknown>),
+                ...(claims.flags as Record<string, unknown>),
+              },
+            }
+          : {}),
         originalSubscriptionClaimId,
       },
     });
