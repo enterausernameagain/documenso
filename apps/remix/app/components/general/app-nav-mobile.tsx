@@ -14,7 +14,7 @@ import { ThemeSwitcher } from '@documenso/ui/primitives/theme-switcher';
 
 import { useOptionalCurrentTeam } from '~/providers/team';
 
-const LogoImage = '/red-favcon.svg';
+const LogoImage = '/red-favcon.png';
 
 export type AppNavMobileProps = {
   isMenuOpen: boolean;
@@ -85,14 +85,7 @@ export const AppNavMobile = ({ isMenuOpen, onMenuOpenChange }: AppNavMobileProps
     <Sheet open={isMenuOpen} onOpenChange={onMenuOpenChange}>
       <SheetContent className="flex w-full max-w-[350px] flex-col">
         <Link to="/" onClick={handleMenuItemClick}>
-          <img
-            src={LogoImage}
-            style={{ width: '75%', height: '75%' }}
-            alt="Redsolutions Logo"
-            className=""
-            width={170}
-            height={25}
-          />
+          <img src={LogoImage} alt="Redsolutions Logo" className="h-3 w-auto" />
         </Link>
 
         <div className="mt-8 flex w-full flex-col items-start gap-y-4">
