@@ -92,9 +92,7 @@ export const Header = ({ className, ...props }: HeaderProps) => {
 
           <div className="mr-3 hidden md:block">
             <div className="hidden md:flex">
-              <div className="hidden md:flex">
-                <ThemeSwitcher />
-              </div>
+              <ThemeSwitcher />
             </div>
           </div>
           <button onClick={() => setIsHamburgerMenuOpen(true)}>
