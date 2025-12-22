@@ -46,7 +46,7 @@ export const AccessAuth2FAEmailTemplate = ({
                 <Img src={branding.brandingLogo} alt="Branding Logo" className="mb-4 h-6" />
               ) : (
                 <Img
-                  src={getAssetUrl('/static/logo.png')}
+                  src={getAssetUrl('/static/red-favcon.png')}
                   alt="Redsolutions Logo"
                   className="mb-4 h-6"
                 />

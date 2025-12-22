@@ -37,7 +37,7 @@ export const ResetPasswordTemplate = ({
                 <Img src={branding.brandingLogo} alt="Branding Logo" className="mb-4 h-6" />
               ) : (
                 <Img
-                  src={getAssetUrl('/static/logo.png')}
+                  src={getAssetUrl('/static/red-favcon.png')}
                   alt="Redsolutions Logo"
                   className="mb-4 h-6"
                 />
@@ -72,7 +72,7 @@ export const ResetPasswordTemplate = ({
                 <Trans>
                   Didn't request a password change? We are here to help you secure your account,
                   just{' '}
-                  <Link className="text-documenso-700 font-normal" href="mailto:hi@documenso.com">
+                  <Link className="font-normal text-documenso-700" href="mailto:hi@documenso.com">
                     contact us
                   </Link>
                   .
