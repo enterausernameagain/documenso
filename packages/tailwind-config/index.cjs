@@ -109,7 +109,7 @@ module.exports = {
           950: '#252d46',
         },
         recipient: {
-          green: 'hsl(var(--recipient-green))',
+          blue: 'hsl(var(--recipient-blue))',
           blue: 'hsl(var(--recipient-blue))',
           purple: 'hsl(var(--recipient-purple))',
           orange: 'hsl(var(--recipient-orange))',
