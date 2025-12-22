@@ -163,6 +163,7 @@ export default function OrganisationSignIn({ loaderData }: Route.ComponentProps)
 
         <p className="mt-2 text-sm text-muted-foreground">
           <Trans>Sign in to your account</Trans>
+          <img src="/red-favicon.svg" alt="Redsolutions" className="mt-4 h-12 w-auto" />
         </p>
 
         <hr className="-mx-6 my-4" />

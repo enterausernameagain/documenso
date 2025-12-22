@@ -35,7 +35,7 @@ export const DocumentSelfSignedEmailTemplate = ({
                 <Img
                   src={
                     branding.brandingLogo?.startsWith('/')
-                      ? getAssetUrl(branding.brandingLogo)
+                      ? getAssetUrl('/static/logo.png')
                       : branding.brandingLogo
                   }
                   alt="Branding Logo"

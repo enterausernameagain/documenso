@@ -41,7 +41,7 @@ export const OrganisationLeaveEmailTemplate = ({
               <Img
                 src={
                   branding.brandingLogo?.startsWith('/')
-                    ? getAssetUrl(branding.brandingLogo)
+                    ? '/static/logo.png'
                     : branding.brandingLogo
                 }
                 alt="Branding Logo"
