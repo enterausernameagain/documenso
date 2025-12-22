@@ -110,7 +110,7 @@ export const AdminOrganisationsTable = ({
           return (
             <div
               className={`inline-flex items-center rounded-full px-2 py-1 text-xs font-medium ${
-                isPaid ? 'bg-green-100 text-green-800' : 'bg-gray-100 text-gray-800'
+                isPaid ? 'bg-blue-100 text-blue-800' : 'bg-gray-100 text-gray-800'
               }`}
             >
               {isPaid ? (
@@ -143,7 +143,7 @@ export const AdminOrganisationsTable = ({
         cell: ({ row }) => (
           <DropdownMenu>
             <DropdownMenuTrigger>
-              <MoreHorizontalIcon className="text-muted-foreground h-5 w-5" />
+              <MoreHorizontalIcon className="h-5 w-5 text-muted-foreground" />
             </DropdownMenuTrigger>
 
             <DropdownMenuContent className="w-52" align="start" forceMount>

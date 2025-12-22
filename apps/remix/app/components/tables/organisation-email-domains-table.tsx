@@ -83,7 +83,7 @@ export const OrganisationEmailDomainsDataTable = () => {
           match(row.original.status)
             .with(EmailDomainStatus.ACTIVE, () => (
               <Badge>
-                <CheckCircle2Icon className="mr-2 h-4 w-4 text-green-500 dark:text-green-300" />
+                <CheckCircle2Icon className="mr-2 h-4 w-4 text-blue-500 dark:text-blue-300" />
                 <Trans>Active</Trans>
               </Badge>
             ))

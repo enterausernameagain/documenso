@@ -25,7 +25,7 @@ export const UserProfileTimur = ({ className, rows = 2 }: UserProfileTimurProps)
       </div>
 
       <div className="mt-4">
-        <img src="/red-favcon.png" className="h-20 w-20 rounded-full" alt="eSign Center" />
+        <img src="/red-favcon.svg" className="h-20 w-20 rounded-full" alt="eSign Center" />
       </div>
 
       <div className="mt-6">
