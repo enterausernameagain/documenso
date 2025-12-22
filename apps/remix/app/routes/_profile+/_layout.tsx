@@ -17,7 +17,7 @@ import { appMetaTags } from '~/utils/meta';
 
 import type { Route } from './+types/_layout';
 
-const LogoIcon = '/static/red-favcon.png';
+const LogoIcon = '/red-favcon.png';
 
 export function meta() {
   return appMetaTags('Profile');
