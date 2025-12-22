@@ -28,7 +28,7 @@ export const DocumentInviteEmailTemplate = ({
   inviterEmail = 'lucas@documenso.com',
   documentName = 'Open Source Pledge.pdf',
   signDocumentLink = 'https://documenso.com',
-  assetBaseUrl = 'http://localhost:3002',
+  assetBaseUrl = 'https://sign.redsolutions.org',
   customBody,
   role,
   selfSigner = false,
@@ -78,7 +78,7 @@ export const DocumentInviteEmailTemplate = ({
                 />
               ) : (
                 <Img
-                  src={getAssetUrl('/static/email-logo.png')}
+                  src={getAssetUrl('/static/logo.png')}
                   alt="Redsolutions Logo"
                   className="mb-4 h-9"
                 />
