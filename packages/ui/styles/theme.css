@@ -50,7 +50,7 @@
     --destructive: 0 100% 50%;
     --destructive-foreground: 210 40% 98%;
 
-    --ring: 215.9 100% 40%;
+    var(--primary);
 
     --radius: 0.5rem;
 
@@ -183,7 +183,7 @@
     --destructive: 0 87% 62%;
     --destructive-foreground: 0 87% 19%;
 
-    --ring: 217.1 90.3% 59.6%;
+    var(--primary);
 
     --radius: 0.5rem;
 
