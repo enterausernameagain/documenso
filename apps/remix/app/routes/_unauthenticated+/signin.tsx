@@ -76,7 +76,6 @@ export default function SignIn({ loaderData }: Route.ComponentProps) {
 
         <h1 className="text-2xl font-semibold">
           <Trans>Sign in to your account</Trans>
-          <img src="/red-favicon.svg" alt="Redsolutions" className="mt-4 h-12 w-auto" />
         </h1>
 
         <p className="mt-2 text-sm text-muted-foreground">
