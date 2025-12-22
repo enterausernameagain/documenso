@@ -49,17 +49,12 @@
 
     --destructive: 0 100% 50%;
     --destructive-foreground: 210 40% 98%;
-
-    var(--primary);
-
     --radius: 0.5rem;
 
     --warning: 54 96% 45%;
 
     --gold: 47.9 95.8% 53.1%;
 
-    --recipient-blue: 215.9 100% 40%;
-    --recipient-blue: 212 56% 50%;
     --recipient-purple: 266 100% 64%;
     --recipient-orange: 36 92% 54%;
     --recipient-yellow: 51 100% 43%;
@@ -182,9 +177,6 @@
 
     --destructive: 0 87% 62%;
     --destructive-foreground: 0 87% 19%;
-
-    var(--primary);
-
     --radius: 0.5rem;
 
     --warning: 54 96% 45%;

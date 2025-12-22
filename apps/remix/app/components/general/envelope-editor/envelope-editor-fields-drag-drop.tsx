@@ -288,7 +288,6 @@ export const EnvelopeEditorFieldDragDrop = ({
                 field.className,
                 {
                   'group-hover:text-recipient-blue': selectedRecipientColor === 'blue',
-                  'group-hover:text-recipient-blue': selectedRecipientColor === 'blue',
                   'group-hover:text-recipient-purple': selectedRecipientColor === 'purple',
                   'group-hover:text-recipient-orange': selectedRecipientColor === 'orange',
                   'group-hover:text-recipient-yellow': selectedRecipientColor === 'yellow',
