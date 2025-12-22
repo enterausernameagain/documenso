@@ -91,7 +91,9 @@ export const Header = ({ className, ...props }: HeaderProps) => {
           </button>
 
           <div className="mr-3 hidden md:block">
-            <ThemeSwitcher />
+            <div className="hidden md:flex">
+              <ThemeSwitcher />
+            </div>
           </div>
           <button onClick={() => setIsHamburgerMenuOpen(true)}>
             <MenuIcon className="h-6 w-6 text-muted-foreground" />
