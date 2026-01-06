@@ -70,7 +70,7 @@ export const upsertFieldRect = (
     width: fieldWidth,
     height: fieldHeight,
     fill: DEFAULT_RECT_BACKGROUND,
-    stroke: color ? RECIPIENT_COLOR_STYLES[color].baseRing : '#e5e7eb',
+    stroke: '#2563EB',
     strokeWidth: 2,
     cornerRadius: 2,
     strokeScaleEnabled: false,

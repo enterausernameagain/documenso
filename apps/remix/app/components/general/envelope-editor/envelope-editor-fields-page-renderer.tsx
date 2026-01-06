@@ -245,16 +245,22 @@ export default function EnvelopeEditorFieldsPageRenderer() {
       shouldOverdrawWholeArea: true,
       ignoreStroke: true,
       flipEnabled: false,
+
+      // Brand blue selection halo
+      borderStroke: 'rgb(24, 160, 251)',
+      anchorStroke: 'rgb(24, 160, 251)',
+      anchorFill: 'rgb(24, 160, 251)',
+
+      anchorSize: 8,
+      borderDash: [4, 4],
+
       boundBoxFunc: (oldBox, newBox) => {
-        // Enforce minimum size
         if (newBox.width < 30 || newBox.height < 20) {
           return oldBox;
         }
-
         return newBox;
       },
     });
-
     currentPageLayer.add(transformer);
 
     // Add selection rectangle.
