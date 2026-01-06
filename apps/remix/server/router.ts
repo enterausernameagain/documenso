@@ -109,6 +109,7 @@ app.route('/api/ai', aiRoute);
 // API servers.
 app.use(`/api/v1/*`, cors());
 app.route('/api/v1', tsRestHonoApp);
+app.use('/api/jobs', jobsClient.getApiHandler());
 app.use('/api/jobs/*', jobsClient.getApiHandler());
 app.use('/api/trpc/*', reactRouterTrpcServer);
 
